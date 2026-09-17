@@ -1434,3 +1434,443 @@ footer {
         scroll-behavior: auto !important;
     }
 }
+/* ================================================= */
+/* DARK MODE */
+/* ================================================= */
+
+/* زر تغيير الوضع */
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #D8E8DF;
+    border-radius: 50%;
+
+    background-color: #FFFFFF;
+    color: #12372A;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+
+    background-color: #F0F7F3;
+}
+
+.theme-toggle:active {
+    transform: scale(0.92);
+}
+
+
+/* ================================================= */
+/* Dark Mode Colors */
+/* ================================================= */
+
+body.dark-mode {
+    background-color: #0F1713;
+    color: #E8F0EC;
+}
+
+
+/* Header */
+
+body.dark-mode header {
+    background-color: rgba(15, 23, 19, 0.94);
+
+    border-bottom-color: #26382F;
+}
+
+
+/* Logo */
+
+body.dark-mode .logo {
+    color: #42B883;
+}
+
+
+/* Navbar */
+
+body.dark-mode nav > a {
+    color: #AABBB3;
+}
+
+body.dark-mode nav > a:hover {
+    color: #42B883;
+}
+
+
+/* Language */
+
+body.dark-mode .language-switcher button {
+    color: #9BAEA5;
+}
+
+body.dark-mode .language-switcher button:hover,
+body.dark-mode .language-switcher .language-active {
+    color: #42B883;
+}
+
+
+/* Theme Button */
+
+body.dark-mode .theme-toggle {
+    background-color: #18231D;
+    color: #F5D76E;
+
+    border-color: #30443A;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #213129;
+}
+
+
+/* ================================================= */
+/* Hero */
+/* ================================================= */
+
+body.dark-mode .hero::before {
+    border-color: #26382F;
+}
+
+body.dark-mode .hero h1 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .hero h1 span {
+    color: #42B883;
+}
+
+body.dark-mode .hero-content > p {
+    color: #AABBB3;
+}
+
+body.dark-mode .hero-label {
+    background-color: #18372B;
+    color: #55C995;
+}
+
+
+/* ================================================= */
+/* Buttons */
+/* ================================================= */
+
+body.dark-mode .secondary-button {
+    background-color: #18231D;
+    color: #55C995;
+
+    border-color: #30443A;
+}
+
+body.dark-mode .secondary-button:hover {
+    background-color: #213129;
+}
+
+
+/* ================================================= */
+/* Hero Card */
+/* ================================================= */
+
+body.dark-mode .hero-card {
+    background-color: #17221C;
+
+    border-color: #2A3B32;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25),
+        0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .hero-card:hover {
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.30),
+        0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode .card-icon {
+    background-color: #20382D;
+}
+
+body.dark-mode .card-status {
+    background-color: #1C382C;
+    color: #55C995;
+}
+
+body.dark-mode .hero-card h3 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .hero-card > p {
+    color: #9DAEA6;
+}
+
+body.dark-mode .course-info > div {
+    background-color: #1D2922;
+}
+
+body.dark-mode .course-info strong {
+    color: #55C995;
+}
+
+body.dark-mode .course-info span {
+    color: #9BAEA5;
+}
+
+
+/* ================================================= */
+/* Sections */
+/* ================================================= */
+
+body.dark-mode .why-badr {
+    background-color: #141E19;
+}
+
+body.dark-mode .curriculum {
+    background-color: #0F1713;
+}
+
+body.dark-mode .study-system {
+    background-color: #141E19;
+}
+
+body.dark-mode .students-section {
+    background-color: #0F1713;
+}
+
+
+/* ================================================= */
+/* Section Headings */
+/* ================================================= */
+
+body.dark-mode .section-heading h2 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .section-heading > p {
+    color: #AABBB3;
+}
+
+body.dark-mode .section-label {
+    background-color: #18372B;
+    color: #55C995;
+}
+
+
+/* ================================================= */
+/* Feature Cards */
+/* ================================================= */
+
+body.dark-mode .feature-card {
+    background-color: #17221C;
+
+    border-color: #2A3B32;
+}
+
+body.dark-mode .feature-card:hover {
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .feature-number {
+    color: #55C995;
+}
+
+body.dark-mode .feature-card h3 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .feature-card p {
+    color: #9DAEA6;
+}
+
+
+/* ================================================= */
+/* Curriculum */
+/* ================================================= */
+
+body.dark-mode .part-heading > span {
+    color: #55C995;
+}
+
+body.dark-mode .part-heading h3 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .unit-card {
+    background-color: #17221C;
+
+    border-color: #2A3B32;
+}
+
+body.dark-mode .unit-card:hover {
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .unit-number {
+    background-color: #18372B;
+    color: #55C995;
+}
+
+body.dark-mode .unit-card h3 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .unit-card p {
+    color: #9DAEA6;
+}
+
+
+/* ================================================= */
+/* Study System */
+/* ================================================= */
+
+body.dark-mode .study-step {
+    border-color: #2A3B32;
+}
+
+body.dark-mode .study-step > span {
+    color: #55C995;
+}
+
+body.dark-mode .study-step h3 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .study-step p {
+    color: #9DAEA6;
+}
+
+
+/* ================================================= */
+/* Final CTA */
+/* ================================================= */
+
+body.dark-mode .final-cta {
+    background-color: #18372B;
+}
+
+body.dark-mode .final-cta h2 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .final-cta p {
+    color: #AABBB3;
+}
+
+
+/* ================================================= */
+/* Auth Modal */
+/* ================================================= */
+
+body.dark-mode .auth-card {
+    background-color: #17221C;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .auth-card h2 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .auth-card > p {
+    color: #AABBB3;
+}
+
+body.dark-mode .auth-close {
+    background-color: #213129;
+    color: #EAF2EE;
+}
+
+body.dark-mode .auth-close:hover {
+    background-color: #2A3B32;
+}
+
+body.dark-mode #login-form label {
+    color: #DDE9E3;
+}
+
+body.dark-mode #login-form input {
+    background-color: #101913;
+
+    border-color: #30443A;
+
+    color: #EAF2EE;
+}
+
+body.dark-mode #login-form input:focus {
+    border-color: #42B883;
+
+    box-shadow:
+        0 0 0 3px rgba(66, 184, 131, 0.12);
+}
+
+body.dark-mode .auth-note {
+    color: #81938A !important;
+}
+
+
+/* ================================================= */
+/* Footer */
+/* ================================================= */
+
+body.dark-mode footer {
+    background-color: #09100C;
+}
+
+
+/* ================================================= */
+/* انتقال ناعم بين الوضعين */
+/* ================================================= */
+
+body,
+header,
+.hero-card,
+.feature-card,
+.unit-card,
+.study-system,
+.why-badr,
+.curriculum,
+.students-section,
+.final-cta,
+.auth-card,
+.course-info > div,
+.secondary-button,
+.theme-toggle,
+#login-form input {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ================================================= */
+/* Mobile */
+/* ================================================= */
+
+@media (max-width: 800px) {
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+
+        font-size: 15px;
+    }
+}
