@@ -3223,3 +3223,113 @@ body.dark-mode .dashboard-secondary-button:hover {
         height: 36px;
     }
 }
+
+  /* =========================================================
+   DASHBOARD THEME TOGGLE
+========================================================= */
+
+.dashboard-header .theme-toggle {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: 1px solid #DCE9E2;
+    border-radius: 50%;
+
+    background: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+
+/* Moon */
+
+.dashboard-header .theme-toggle .theme-moon {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #12372A;
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    display: block;
+}
+
+
+/* Moon cut */
+
+.dashboard-header .theme-toggle .theme-moon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    top: -4px;
+    right: -4px;
+
+    border-radius: 50%;
+
+    background: #FFFFFF;
+}
+
+
+/* Sun */
+
+.dashboard-header .theme-toggle .theme-sun {
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #F4B942;
+
+    opacity: 0;
+
+    transform: scale(0.25);
+
+    display: block;
+}
+
+
+/* Dark mode */
+
+body.dark-mode .dashboard-header .theme-moon {
+    opacity: 0;
+
+    transform: scale(0.25) rotate(120deg);
+}
+
+body.dark-mode .dashboard-header .theme-sun {
+    opacity: 1;
+
+    transform: scale(1) rotate(0deg);
+}
+
+body.dark-mode .dashboard-header .theme-toggle {
+    background: #18251F;
+
+    border-color: #30443A;
+}
