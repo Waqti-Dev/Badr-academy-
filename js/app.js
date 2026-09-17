@@ -2,40 +2,49 @@
 // 1. SCROLL REVEAL
 // =========================================
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
+
 
 if ("IntersectionObserver" in window) {
 
-    const revealObserver = new IntersectionObserver(
-        (entries) => {
+    const revealObserver =
+        new IntersectionObserver(
+            (entries) => {
 
-            entries.forEach((entry) => {
+                entries.forEach((entry) => {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    entry.target.classList.add("show");
+                        entry.target.classList.add("show");
 
-                    revealObserver.unobserve(entry.target);
-                }
+                        revealObserver.unobserve(
+                            entry.target
+                        );
 
-            });
+                    }
 
-        },
-        {
-            threshold: 0.15
-        }
-    );
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
 
 
     revealElements.forEach((element) => {
+
         revealObserver.observe(element);
+
     });
 
 } else {
 
-    // لو المتصفح مش بيدعم IntersectionObserver
     revealElements.forEach((element) => {
+
         element.classList.add("show");
+
     });
 
 }
@@ -43,26 +52,36 @@ if ("IntersectionObserver" in window) {
 
 
 // =========================================
-// 2. زر استكشف المنهج
+// 2. استكشف المنهج
 // =========================================
 
 const exploreCurriculum =
-    document.getElementById("explore-curriculum");
+    document.getElementById(
+        "explore-curriculum"
+    );
+
 
 const exploreCurriculumCard =
-    document.getElementById("explore-curriculum-card");
+    document.getElementById(
+        "explore-curriculum-card"
+    );
 
 
 function goToCurriculum() {
 
     const curriculumSection =
-        document.getElementById("curriculum");
+        document.getElementById(
+            "curriculum"
+        );
+
 
     if (!curriculumSection) return;
+
 
     curriculumSection.scrollIntoView({
         behavior: "smooth"
     });
+
 }
 
 
@@ -92,41 +111,68 @@ if (exploreCurriculumCard) {
 // =========================================
 
 const authModal =
-    document.getElementById("auth-modal");
+    document.getElementById(
+        "auth-modal"
+    );
+
 
 const authOverlay =
-    document.getElementById("auth-overlay");
+    document.getElementById(
+        "auth-overlay"
+    );
+
 
 const authClose =
-    document.getElementById("auth-close");
+    document.getElementById(
+        "auth-close"
+    );
+
 
 const startLearningButtons =
-    document.querySelectorAll(".start-learning-button");
+    document.querySelectorAll(
+        ".start-learning-button"
+    );
 
 
-// فتح نافذة تسجيل الدخول
+
+// فتح Login
 function openAuthModal() {
 
     if (!authModal) return;
 
-    authModal.classList.add("active");
 
-    document.body.style.overflow = "hidden";
+    authModal.classList.add(
+        "active"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
 }
 
 
-// إغلاق نافذة تسجيل الدخول
+
+// إغلاق Login
 function closeAuthModal() {
 
     if (!authModal) return;
 
-    authModal.classList.remove("active");
 
-    // نرجع الـ scroll بعد انتهاء الأنيميشن
+    authModal.classList.remove(
+        "active"
+    );
+
+
     setTimeout(() => {
-        document.body.style.overflow = "";
+
+        document.body.style.overflow =
+            "";
+
     }, 400);
+
 }
+
 
 
 // أزرار ابدأ التعلم
@@ -147,6 +193,7 @@ startLearningButtons.forEach(
 );
 
 
+
 // زر X
 if (authClose) {
 
@@ -156,6 +203,7 @@ if (authClose) {
     );
 
 }
+
 
 
 // الضغط على الخلفية
@@ -171,14 +219,13 @@ if (authOverlay) {
 
 
 // =========================================
-// 4. زر ESC
+// 4. ESC
 // =========================================
 
 document.addEventListener(
     "keydown",
     (event) => {
 
-        // إغلاق Login Modal
         if (event.key === "Escape") {
 
             closeAuthModal();
@@ -193,11 +240,13 @@ document.addEventListener(
 
 
 // =========================================
-// 5. نموذج تسجيل الدخول
+// 5. LOGIN FORM
 // =========================================
 
 const loginForm =
-    document.getElementById("login-form");
+    document.getElementById(
+        "login-form"
+    );
 
 
 if (loginForm) {
@@ -207,6 +256,7 @@ if (loginForm) {
         (event) => {
 
             event.preventDefault();
+
 
             alert(
                 "واجهة تسجيل الدخول جاهزة. سنربطها بالحسابات وقاعدة البيانات لاحقًا."
@@ -220,18 +270,26 @@ if (loginForm) {
 
 
 // =========================================
-// 6. زر تسجيل الدخول في الـ Navbar
+// 6. NAVBAR LOGIN
 // =========================================
 
 const navbarLogin =
-    document.getElementById("navbar-login");
+    document.getElementById(
+        "navbar-login"
+    );
 
 
 if (navbarLogin) {
 
     navbarLogin.addEventListener(
         "click",
-        openAuthModal
+        () => {
+
+            closeMobileMenu();
+
+            openAuthModal();
+
+        }
     );
 
 }
@@ -242,11 +300,16 @@ if (navbarLogin) {
 // 7. MOBILE NAVBAR
 // =========================================
 
-const mobileMenuToggle =
-    document.getElementById("mobile-menu-toggle");
+const mobileMenuButton =
+    document.getElementById(
+        "mobile-menu-button"
+    );
+
 
 const mainHeader =
-    document.querySelector("header:not(.dashboard-header)");
+    document.querySelector(
+        "header:not(.dashboard-header)"
+    );
 
 
 // فتح القائمة
@@ -254,16 +317,21 @@ function openMobileMenu() {
 
     if (!mainHeader) return;
 
-    mainHeader.classList.add("mobile-menu-open");
 
-    if (mobileMenuToggle) {
+    mainHeader.classList.add(
+        "mobile-menu-open"
+    );
 
-        mobileMenuToggle.setAttribute(
+
+    if (mobileMenuButton) {
+
+        mobileMenuButton.setAttribute(
             "aria-expanded",
             "true"
         );
 
-        mobileMenuToggle.setAttribute(
+
+        mobileMenuButton.setAttribute(
             "aria-label",
             "إغلاق القائمة"
         );
@@ -273,21 +341,27 @@ function openMobileMenu() {
 }
 
 
+
 // إغلاق القائمة
 function closeMobileMenu() {
 
     if (!mainHeader) return;
 
-    mainHeader.classList.remove("mobile-menu-open");
 
-    if (mobileMenuToggle) {
+    mainHeader.classList.remove(
+        "mobile-menu-open"
+    );
 
-        mobileMenuToggle.setAttribute(
+
+    if (mobileMenuButton) {
+
+        mobileMenuButton.setAttribute(
             "aria-expanded",
             "false"
         );
 
-        mobileMenuToggle.setAttribute(
+
+        mobileMenuButton.setAttribute(
             "aria-label",
             "فتح القائمة"
         );
@@ -297,19 +371,25 @@ function closeMobileMenu() {
 }
 
 
-// فتح / إغلاق القائمة
-if (mobileMenuToggle) {
 
-    mobileMenuToggle.addEventListener(
+// زر ☰
+if (
+    mobileMenuButton &&
+    mainHeader
+) {
+
+    mobileMenuButton.addEventListener(
         "click",
         (event) => {
 
             event.stopPropagation();
 
+
             const isOpen =
                 mainHeader.classList.contains(
                     "mobile-menu-open"
                 );
+
 
             if (isOpen) {
 
@@ -329,13 +409,16 @@ if (mobileMenuToggle) {
 
 
 // =========================================
-// 8. روابط الـ Mobile Navbar
+// 8. روابط الـNAV
 // =========================================
 
 if (mainHeader) {
 
     const mobileNavLinks =
-        mainHeader.querySelectorAll("nav a");
+        mainHeader.querySelectorAll(
+            "nav a"
+        );
+
 
     mobileNavLinks.forEach(
         (link) => {
@@ -357,7 +440,7 @@ if (mainHeader) {
 
 
 // =========================================
-// 9. الضغط خارج الـ Mobile Navbar
+// 9. الضغط خارج القائمة
 // =========================================
 
 document.addEventListener(
@@ -366,16 +449,20 @@ document.addEventListener(
 
         if (!mainHeader) return;
 
+
         const isOpen =
             mainHeader.classList.contains(
                 "mobile-menu-open"
             );
 
+
         if (!isOpen) return;
 
 
         const clickedInsideHeader =
-            mainHeader.contains(event.target);
+            mainHeader.contains(
+                event.target
+            );
 
 
         if (!clickedInsideHeader) {
@@ -390,7 +477,7 @@ document.addEventListener(
 
 
 // =========================================
-// 10. إغلاق القائمة عند تغيير حجم الشاشة
+// 10. تغيير حجم الشاشة
 // =========================================
 
 window.addEventListener(
@@ -409,14 +496,20 @@ window.addEventListener(
 
 
 // =========================================
-// 11. DARK MODE
+// 11. DARK / LIGHT MODE
 // =========================================
 
 const themeToggle =
-    document.getElementById("theme-toggle");
+    document.getElementById(
+        "theme-toggle"
+    );
+
 
 const savedTheme =
-    localStorage.getItem("badr-theme");
+    localStorage.getItem(
+        "badr-theme"
+    );
+
 
 
 if (savedTheme === "dark") {
@@ -426,6 +519,7 @@ if (savedTheme === "dark") {
     );
 
 }
+
 
 
 if (themeToggle) {
