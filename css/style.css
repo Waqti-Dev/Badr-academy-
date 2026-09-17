@@ -1573,74 +1573,76 @@ footer {
 
 
 /* =========================
-   SUN
+   SUN ICON
 ========================= */
 
 .theme-sun {
-    background: #F4B942;
-}
+    position: absolute;
 
-.theme-sun::after {
-    /* الأشعة */
-    background:
-        linear-gradient(#F4B942, #F4B942) center top / 2px 4px no-repeat,
-        linear-gradient(#F4B942, #F4B942) center bottom / 2px 4px no-repeat,
-        linear-gradient(#F4B942, #F4B942) left center / 4px 2px no-repeat,
-        linear-gradient(#F4B942, #F4B942) right center / 4px 2px no-repeat,
-
-        linear-gradient(
-            45deg,
-            transparent 45%,
-            #F4B942 46%,
-            #F4B942 54%,
-            transparent 55%
-        ) center / 4px 4px no-repeat,
-
-        linear-gradient(
-            -45deg,
-            transparent 45%,
-            #F4B942 46%,
-            #F4B942 54%,
-            transparent 55%
-        ) center / 4px 4px no-repeat;
-}
-
-/* =========================
-   MOON
-========================= */
-
-.theme-moon {
-    width: 18px;
-    height: 18px;
+    width: 13px;
+    height: 13px;
 
     border-radius: 50%;
+    background: #F4B942;
 
-    background: #12372A;
+    opacity: 0;
+    transform: scale(0.25) rotate(-120deg);
 
-    opacity: 1;
-
-    transform:
-        scale(1)
-        rotate(0deg);
+    transition:
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s ease;
 }
 
 
-/* هلال القمر */
+/* أشعة الشمس */
 
-.theme-moon::after {
+.theme-sun::before {
     content: "";
 
     position: absolute;
+    inset: -5px;
 
-    width: 17px;
-    height: 17px;
+    background:
+        linear-gradient(#F4B942, #F4B942)
+            center top / 2px 4px no-repeat,
 
-    top: -4px;
-    left: 5px;
+        linear-gradient(#F4B942, #F4B942)
+            center bottom / 2px 4px no-repeat,
 
-    border-radius: 50%;
+        linear-gradient(#F4B942, #F4B942)
+            left center / 4px 2px no-repeat,
 
-    background: #FFFFFF;
+        linear-gradient(#F4B942, #F4B942)
+            right center / 4px 2px no-repeat;
+}
+
+
+/* الأشعة القطرية */
+
+.theme-sun::after {
+    content: "";
+
+    position: absolute;
+    inset: -5px;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 43%,
+            #F4B942 44%,
+            #F4B942 56%,
+            transparent 57%
+        )
+        center / 4px 4px no-repeat,
+
+        linear-gradient(
+            -45deg,
+            transparent 43%,
+            #F4B942 44%,
+            #F4B942 56%,
+            transparent 57%
+        )
+        center / 4px 4px no-repeat;
 }
 
 
