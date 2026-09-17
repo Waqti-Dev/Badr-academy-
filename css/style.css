@@ -1518,94 +1518,233 @@ footer {
 
 
 /* =========================
-   THEME TOGGLE
+   PREMIUM THEME TOGGLE
 ========================= */
 
 .theme-toggle {
     position: relative;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     padding: 0;
-    border: 1px solid #D8E8DF;
+    border: 1px solid #DCE9E2;
     border-radius: 50%;
-    background-color: #FFFFFF;
+    background: #FFFFFF;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
     overflow: hidden;
 
     transition:
         background-color 0.35s ease,
         border-color 0.35s ease,
-        transform 0.2s ease;
+        transform 0.2s ease,
+        box-shadow 0.35s ease;
 }
 
 .theme-toggle:hover {
     transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(18, 55, 42, 0.08);
 }
 
 .theme-toggle:active {
-    transform: scale(0.94);
+    transform: scale(0.93);
 }
 
-/* الأيقونات */
+
+/* =========================
+   ICON BASE
+========================= */
 
 .theme-icon {
     position: absolute;
-    width: 18px;
-    height: 18px;
+
+    width: 17px;
+    height: 17px;
+
     display: block;
 
     transition:
         transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.3s ease;
+        opacity 0.35s ease;
 }
 
-/* الشمس */
+
+/* =========================
+   SUN
+========================= */
 
 .theme-sun {
-    border: 2px solid #087F5B;
     border-radius: 50%;
+    background: #087F5B;
+
     opacity: 0;
-    transform: scale(0.3) rotate(-90deg);
+    transform: scale(0.25) rotate(-120deg);
 }
 
-.theme-sun::before,
+
+/* الشمس نفسها */
+
+.theme-sun::before {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    top: 5px;
+    left: 5px;
+
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+
+/* أشعة الشمس */
+
 .theme-sun::after {
     content: "";
+
     position: absolute;
+
     inset: -5px;
-    border-top: 2px solid #087F5B;
-    border-bottom: 2px solid #087F5B;
+
+    background:
+        linear-gradient(
+            #087F5B,
+            #087F5B
+        ) center top / 2px 4px no-repeat,
+
+        linear-gradient(
+            #087F5B,
+            #087F5B
+        ) center bottom / 2px 4px no-repeat,
+
+        linear-gradient(
+            #087F5B,
+            #087F5B
+        ) left center / 4px 2px no-repeat,
+
+        linear-gradient(
+            #087F5B,
+            #087F5B
+        ) right center / 4px 2px no-repeat,
+
+        linear-gradient(
+            45deg,
+            transparent 45%,
+            #087F5B 46%,
+            #087F5B 54%,
+            transparent 55%
+        ) center / 4px 4px no-repeat,
+
+        linear-gradient(
+            -45deg,
+            transparent 45%,
+            #087F5B 46%,
+            #087F5B 54%,
+            transparent 55%
+        ) center / 4px 4px no-repeat;
+
     border-radius: 50%;
 }
 
-.theme-sun::after {
-    transform: rotate(90deg);
-}
 
-/* القمر */
+/* =========================
+   MOON
+========================= */
 
 .theme-moon {
-    background-color: #12372A;
+    width: 18px;
+    height: 18px;
+
     border-radius: 50%;
+
+    background: #12372A;
+
     opacity: 1;
-    transform: scale(1) rotate(0deg);
+
+    transform:
+        scale(1)
+        rotate(0deg);
 }
+
+
+/* هلال القمر */
 
 .theme-moon::after {
     content: "";
+
     position: absolute;
+
     width: 17px;
     height: 17px;
+
     top: -4px;
     left: 5px;
+
     border-radius: 50%;
-    background-color: #FFFFFF;
+
+    background: #FFFFFF;
 }
 
+
 /* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .theme-toggle {
+    background: #18251F;
+    border-color: #30443A;
+
+    box-shadow: none;
+}
+
+
+/* القمر يختفي */
+
+body.dark-mode .theme-moon {
+    opacity: 0;
+
+    transform:
+        scale(0.25)
+        rotate(120deg);
+}
+
+
+/* الشمس تظهر */
+
+body.dark-mode .theme-sun {
+    opacity: 1;
+
+    transform:
+        scale(1)
+        rotate(0deg);
+}
+
+
+/* لون خلفية قص القمر */
+
+body.dark-mode .theme-moon::after {
+    background: #18251F;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+}* =========================
    DARK MODE ICON
 ========================= */
 
