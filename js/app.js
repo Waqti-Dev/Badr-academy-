@@ -107,14 +107,16 @@ function closeAuthModal() {
 
 
 // أزرار ابدأ التعلم
-startLearningButtons.forEach((button) => {
-
-    button.addEventListener(
-        "click",
-        openAuthModal
-    );
-
-});
+startLearningButtons.forEach(
+    (button) => {
+        button.addEventListener(
+            "click",
+            () => {
+                window.location.href = "dashboard.html";
+            }
+        );
+    }
+);
 
 
 // زر X
