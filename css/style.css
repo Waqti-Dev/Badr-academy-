@@ -1,6 +1,7 @@
 /* =========================================================
    BADR ACADEMY — STYLE.CSS
-   Desktop + Mobile Navbar + Dark Mode + Dashboard
+   Homepage + Dashboard + Lessons
+   Desktop + Mobile + Dark Mode
 ========================================================= */
 
 
@@ -1576,20 +1577,13 @@ body.dark-mode {
     color: #E8F0EC;
 }
 
-
-/* Header */
-
 body.dark-mode header {
     background-color: rgba(15, 23, 19, 0.90);
-
     border-bottom-color: rgba(48, 68, 58, 0.8);
 
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.12);
 }
-
-
-/* Logo */
 
 body.dark-mode .logo {
     color: #EAF2EE;
@@ -1598,9 +1592,6 @@ body.dark-mode .logo {
 body.dark-mode .logo::after {
     background-color: #42B883;
 }
-
-
-/* Navbar */
 
 body.dark-mode nav > a {
     color: #AABBB3;
@@ -1613,9 +1604,6 @@ body.dark-mode nav > a:hover {
 body.dark-mode nav > a::after {
     background-color: #42B883;
 }
-
-
-/* Language */
 
 body.dark-mode .language-switcher {
     border-right-color: #30443A;
@@ -1634,9 +1622,6 @@ body.dark-mode .language-switcher span {
     color: #405349;
 }
 
-
-/* Login */
-
 body.dark-mode .login-button {
     background-color: #087F5B;
     border-color: #087F5B;
@@ -1646,14 +1631,9 @@ body.dark-mode .login-button:hover {
     background-color: #096E50;
 }
 
-
-/* Theme button */
-
 body.dark-mode .theme-toggle {
     background-color: #18251F;
-
     border-color: #30443A;
-
     box-shadow: none;
 }
 
@@ -1663,7 +1643,6 @@ body.dark-mode .theme-toggle:hover {
 
 body.dark-mode .theme-moon {
     opacity: 0;
-
     transform:
         scale(0.25)
         rotate(120deg);
@@ -1671,7 +1650,6 @@ body.dark-mode .theme-moon {
 
 body.dark-mode .theme-sun {
     opacity: 1;
-
     transform:
         scale(1)
         rotate(0deg);
@@ -1680,9 +1658,6 @@ body.dark-mode .theme-sun {
 body.dark-mode .theme-moon::after {
     background-color: #18251F;
 }
-
-
-/* Hero */
 
 body.dark-mode .hero::before {
     border-color: #26382F;
@@ -1705,14 +1680,9 @@ body.dark-mode .hero-label {
     color: #55C995;
 }
 
-
-/* Buttons */
-
 body.dark-mode .secondary-button {
     background-color: #18231D;
-
     color: #55C995;
-
     border-color: #30443A;
 }
 
@@ -1720,12 +1690,8 @@ body.dark-mode .secondary-button:hover {
     background-color: #213129;
 }
 
-
-/* Hero card */
-
 body.dark-mode .hero-card {
     background-color: #17221C;
-
     border-color: #2A3B32;
 
     box-shadow:
@@ -1745,7 +1711,6 @@ body.dark-mode .card-icon {
 
 body.dark-mode .card-status {
     background-color: #1C382C;
-
     color: #55C995;
 }
 
@@ -1769,9 +1734,6 @@ body.dark-mode .course-info span {
     color: #9BAEA5;
 }
 
-
-/* Sections */
-
 body.dark-mode .why-badr {
     background-color: #141E19;
 }
@@ -1788,9 +1750,6 @@ body.dark-mode .students-section {
     background-color: #0F1713;
 }
 
-
-/* Section headings */
-
 body.dark-mode .section-heading h2 {
     color: #EAF2EE;
 }
@@ -1804,12 +1763,8 @@ body.dark-mode .section-label {
     color: #55C995;
 }
 
-
-/* Feature cards */
-
 body.dark-mode .feature-card {
     background-color: #17221C;
-
     border-color: #2A3B32;
 }
 
@@ -1830,9 +1785,6 @@ body.dark-mode .feature-card p {
     color: #9DAEA6;
 }
 
-
-/* Curriculum */
-
 body.dark-mode .part-heading > span {
     color: #55C995;
 }
@@ -1843,7 +1795,6 @@ body.dark-mode .part-heading h3 {
 
 body.dark-mode .unit-card {
     background-color: #17221C;
-
     border-color: #2A3B32;
 }
 
@@ -1865,9 +1816,6 @@ body.dark-mode .unit-card p {
     color: #9DAEA6;
 }
 
-
-/* Study system */
-
 body.dark-mode .study-step {
     border-color: #2A3B32;
 }
@@ -1884,9 +1832,6 @@ body.dark-mode .study-step p {
     color: #9DAEA6;
 }
 
-
-/* Final CTA */
-
 body.dark-mode .final-cta {
     background-color: #18372B;
 }
@@ -1898,9 +1843,6 @@ body.dark-mode .final-cta h2 {
 body.dark-mode .final-cta p {
     color: #AABBB3;
 }
-
-
-/* Auth */
 
 body.dark-mode .auth-card {
     background-color: #17221C;
@@ -1932,9 +1874,7 @@ body.dark-mode #login-form label {
 
 body.dark-mode #login-form input {
     background-color: #101913;
-
     border-color: #30443A;
-
     color: #EAF2EE;
 }
 
@@ -1949,15 +1889,9 @@ body.dark-mode .auth-note {
     color: #81938A !important;
 }
 
-
-/* Footer */
-
 body.dark-mode footer {
     background-color: #09100C;
 }
-
-
-/* Smooth transitions */
 
 body,
 header,
@@ -2100,9 +2034,6 @@ header,
     top: -4px;
     right: -4px;
 }
-
-
-/* Dashboard theme */
 
 .dashboard-header .theme-toggle {
     width: 40px;
@@ -2937,7 +2868,649 @@ body.dark-mode .exam-score {
 
 
 /* =========================================================
-   22. RESPONSIVE — HOMEPAGE
+   23. LESSONS / CURRICULUM PAGE
+========================================================= */
+
+.lessons-page {
+    min-height: calc(100vh - 72px);
+
+    padding: 55px 7% 90px;
+
+    background:
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(8, 127, 91, 0.045),
+            transparent 28%
+        ),
+        #FAFBF8;
+}
+
+
+/* =========================================================
+   LESSONS HERO
+========================================================= */
+
+.lessons-hero {
+    max-width: 1150px;
+
+    margin: 0 auto 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        330px;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+.lessons-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 13px;
+
+    margin-bottom: 16px;
+
+    border-radius: 20px;
+
+    background: #EAF4EF;
+
+    color: #087F5B;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.lessons-hero h1 {
+    margin: 0 0 15px;
+
+    color: #12372A;
+
+    font-size: 42px;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.6px;
+}
+
+.lessons-hero > div:first-child > p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #66736D;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   LESSONS PROGRESS CARD
+========================================================= */
+
+.lessons-progress-card {
+    padding: 24px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E5EEE9;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(18, 55, 42, 0.055);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.lessons-progress-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(18, 55, 42, 0.08);
+}
+
+.lessons-progress-card > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #66736D;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lessons-progress-card strong {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #12372A;
+
+    font-size: 27px;
+}
+
+.lessons-progress-card strong span {
+    color: #087F5B;
+
+    font-size: 15px;
+}
+
+.lessons-progress-bar {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 99px;
+
+    background: #EAF1ED;
+}
+
+.lessons-progress-bar span {
+    display: block;
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #087F5B;
+
+    animation: progressGrow 1s ease forwards;
+    animation-delay: 0.35s;
+}
+
+@keyframes progressGrow {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 10%;
+    }
+}
+
+
+/* =========================================================
+   CURRICULUM PART
+========================================================= */
+
+.curriculum-part {
+    max-width: 1150px;
+
+    margin: 0 auto 65px;
+}
+
+.curriculum-part:last-child {
+    margin-bottom: 0;
+}
+
+.part-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 24px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #E5EEE9;
+}
+
+.part-number {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #12372A;
+
+    color: #FFFFFF;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.part-heading > div {
+    min-width: 0;
+}
+
+.part-heading > div > span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #087F5B;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.part-heading h2,
+.part-heading h3 {
+    margin: 0;
+
+    color: #12372A;
+
+    font-size: 25px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   UNIT CARDS
+========================================================= */
+
+.curriculum-unit {
+    position: relative;
+
+    margin-bottom: 18px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E5EEE9;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(18, 55, 42, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.curriculum-unit:hover {
+    transform: translateY(-3px);
+
+    border-color: #D6E6DE;
+
+    box-shadow:
+        0 12px 28px rgba(18, 55, 42, 0.07);
+}
+
+
+/* =========================================================
+   UNIT HEADER
+========================================================= */
+
+.unit-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #EEF3F0;
+}
+
+.unit-header .unit-number {
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border-radius: 11px;
+
+    background: #EAF4EF;
+
+    color: #087F5B;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.unit-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.unit-info h3 {
+    margin: 0;
+
+    color: #12372A;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+.unit-info p {
+    margin: 4px 0 0;
+
+    color: #89958F;
+
+    font-size: 12px;
+}
+
+.unit-status {
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #F3F8F5;
+
+    color: #087F5B;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   UNIT CONTENT
+========================================================= */
+
+.unit-content {
+    padding: 24px;
+}
+
+.unit-introduction {
+    margin: 0 0 22px;
+
+    padding: 16px 18px;
+
+    border-right: 3px solid #087F5B;
+
+    border-radius: 10px;
+
+    background: #F7FAF8;
+
+    color: #53645C;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.unit-introduction strong {
+    color: #12372A;
+}
+
+
+/* =========================================================
+   CONCEPT GRID
+========================================================= */
+
+.concepts-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.concept-item {
+    position: relative;
+
+    padding: 12px 14px 12px 35px;
+
+    border: 1px solid #EEF3F0;
+
+    border-radius: 10px;
+
+    background: #FCFDFC;
+
+    color: #66736D;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.concept-item::before {
+    content: "✓";
+
+    position: absolute;
+
+    right: 13px;
+    top: 12px;
+
+    color: #087F5B;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.concept-item {
+    padding-right: 35px;
+}
+
+.concept-item:hover {
+    background: #F5FAF7;
+
+    border-color: #DDEBE4;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   UNIT QUESTION
+========================================================= */
+
+.unit-question {
+    margin-top: 20px;
+
+    padding: 16px 18px;
+
+    border-radius: 12px;
+
+    background: #12372A;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.unit-question strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8FE0BD;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   LESSONS DARK MODE
+========================================================= */
+
+body.dark-mode .lessons-page {
+    background:
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(66, 184, 131, 0.055),
+            transparent 28%
+        ),
+        #0F1713;
+}
+
+body.dark-mode .lessons-eyebrow {
+    background: #18372B;
+
+    color: #55C995;
+}
+
+body.dark-mode .lessons-hero h1 {
+    color: #EAF2EE;
+}
+
+body.dark-mode .lessons-hero > div:first-child > p {
+    color: #AABBB3;
+}
+
+body.dark-mode .lessons-progress-card {
+    background: #121D18;
+
+    border-color: #26372F;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode .lessons-progress-card > span {
+    color: #91A39A;
+}
+
+body.dark-mode .lessons-progress-card strong {
+    color: #E8F0EC;
+}
+
+body.dark-mode .lessons-progress-card strong span {
+    color: #6BC5A5;
+}
+
+body.dark-mode .lessons-progress-bar {
+    background: #26372F;
+}
+
+body.dark-mode .lessons-progress-bar span {
+    background: #42B883;
+}
+
+body.dark-mode .part-heading {
+    border-bottom-color: #26372F;
+}
+
+body.dark-mode .part-number {
+    background: #1D352A;
+
+    color: #6BC5A5;
+}
+
+body.dark-mode .part-heading > div > span {
+    color: #6BC5A5;
+}
+
+body.dark-mode .part-heading h2,
+body.dark-mode .part-heading h3 {
+    color: #E8F0EC;
+}
+
+body.dark-mode .curriculum-unit {
+    background: #121D18;
+
+    border-color: #26372F;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+body.dark-mode .curriculum-unit:hover {
+    border-color: #30483D;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.20);
+}
+
+body.dark-mode .unit-header {
+    border-bottom-color: #26372F;
+}
+
+body.dark-mode .unit-header .unit-number {
+    background: #1D352A;
+
+    color: #6BC5A5;
+}
+
+body.dark-mode .unit-info h3 {
+    color: #E8F0EC;
+}
+
+body.dark-mode .unit-info p {
+    color: #81938A;
+}
+
+body.dark-mode .unit-status {
+    background: #1A2922;
+
+    color: #6BC5A5;
+}
+
+body.dark-mode .unit-introduction {
+    background: #18251F;
+
+    color: #AABBB3;
+}
+
+body.dark-mode .unit-introduction strong {
+    color: #E8F0EC;
+}
+
+body.dark-mode .concept-item {
+    background: #101913;
+
+    border-color: #26372F;
+
+    color: #AABBB3;
+}
+
+body.dark-mode .concept-item::before {
+    color: #6BC5A5;
+}
+
+body.dark-mode .concept-item:hover {
+    background: #18251F;
+
+    border-color: #30483D;
+}
+
+body.dark-mode .unit-question {
+    background: #1A2922;
+
+    color: #C9D8D1;
+}
+
+body.dark-mode .unit-question strong {
+    color: #6BC5A5;
+}
+
+
+/* =========================================================
+   24. RESPONSIVE — HOMEPAGE + LESSONS
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -2961,6 +3534,7 @@ body.dark-mode .exam-score {
             1px solid #E5EEE9;
     }
 
+
     /* Dashboard */
 
     .dashboard-sidebar {
@@ -2974,11 +3548,24 @@ body.dark-mode .exam-score {
     .dashboard-main-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* Lessons */
+
+    .lessons-hero {
+        grid-template-columns: 1fr 280px;
+
+        gap: 30px;
+    }
+
+    .lessons-hero h1 {
+        font-size: 36px;
+    }
 }
 
 
 /* =========================================================
-   23. RESPONSIVE — 800px
+   25. RESPONSIVE — 800px
 ========================================================= */
 
 @media (max-width: 800px) {
@@ -3004,12 +3591,6 @@ body.dark-mode .exam-score {
     .mobile-menu-button {
         display: flex;
     }
-
-    /*
-       Mobile navigation.
-       JS adds "mobile-menu-open" to HEADER,
-       not to NAV.
-    */
 
     header > nav {
         position: absolute;
@@ -3248,11 +3829,6 @@ body.dark-mode .exam-score {
         padding: 20px 10px;
     }
 
-    /*
-       IMPORTANT:
-       Generic homepage nav rules must NOT hide dashboard links.
-    */
-
     .dashboard-nav > a.dashboard-nav-link {
         display: flex;
 
@@ -3314,11 +3890,105 @@ body.dark-mode .exam-score {
         width: 36px;
         height: 36px;
     }
+
+
+    /* =========================
+       LESSONS MOBILE
+    ========================= */
+
+    .lessons-page {
+        padding: 35px 5% 65px;
+    }
+
+    .lessons-hero {
+        display: block;
+
+        margin-bottom: 42px;
+    }
+
+    .lessons-hero h1 {
+        font-size: 32px;
+
+        line-height: 1.3;
+    }
+
+    .lessons-hero > div:first-child > p {
+        font-size: 14px;
+    }
+
+    .lessons-progress-card {
+        margin-top: 25px;
+
+        padding: 20px;
+    }
+
+    .curriculum-part {
+        margin-bottom: 48px;
+    }
+
+    .part-heading {
+        gap: 12px;
+
+        padding-bottom: 15px;
+    }
+
+    .part-number {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+    .part-heading h2,
+    .part-heading h3 {
+        font-size: 20px;
+    }
+
+    .unit-header {
+        align-items: flex-start;
+
+        padding: 18px;
+    }
+
+    .unit-header .unit-number {
+        min-width: 38px;
+        height: 38px;
+    }
+
+    .unit-info h3 {
+        font-size: 16px;
+    }
+
+    .unit-status {
+        display: none;
+    }
+
+    .unit-content {
+        padding: 18px;
+    }
+
+    .concepts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .unit-introduction {
+        padding: 14px;
+
+        font-size: 13px;
+    }
+
+    .concept-item {
+        font-size: 12px;
+    }
+
+    .unit-question {
+        font-size: 13px;
+    }
 }
 
 
 /* =========================================================
-   24. RESPONSIVE — 500px
+   26. RESPONSIVE — 500px
 ========================================================= */
 
 @media (max-width: 500px) {
@@ -3361,6 +4031,90 @@ body.dark-mode .exam-score {
         width: 36px;
         height: 36px;
     }
+
+
+    /* Lessons */
+
+    .lessons-page {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .lessons-hero h1 {
+        font-size: 28px;
+    }
+
+    .lessons-eyebrow {
+        font-size: 11px;
+    }
+
+    .lessons-progress-card strong {
+        font-size: 24px;
+    }
+
+    .part-heading {
+        align-items: flex-start;
+    }
+
+    .part-number {
+        width: 38px;
+        height: 38px;
+
+        font-size: 11px;
+    }
+
+    .part-heading h2,
+    .part-heading h3 {
+        font-size: 18px;
+    }
+
+    .curriculum-unit {
+        border-radius: 15px;
+    }
+
+    .unit-header {
+        gap: 11px;
+
+        padding: 16px;
+    }
+
+    .unit-header .unit-number {
+        min-width: 35px;
+        height: 35px;
+
+        font-size: 10px;
+    }
+
+    .unit-info h3 {
+        font-size: 14px;
+    }
+
+    .unit-info p {
+        font-size: 10px;
+    }
+
+    .unit-content {
+        padding: 15px;
+    }
+
+    .unit-introduction {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .concept-item {
+        padding-top: 11px;
+        padding-bottom: 11px;
+
+        font-size: 11px;
+    }
+
+    .unit-question {
+        padding: 14px;
+
+        font-size: 12px;
+    }
 }
 
 
@@ -3381,12 +4135,6 @@ body.dark-mode .mobile-menu-button span {
 body.dark-mode .mobile-menu-button:hover {
     background-color: #213129;
 }
-
-
-/*
-   IMPORTANT:
-   The menu itself is controlled by HEADER.mobile-menu-open.
-*/
 
 body.dark-mode header.mobile-menu-open > nav {
     background-color: #121D18;
@@ -3414,27 +4162,7 @@ body.dark-mode header > nav .language-switcher {
 
 
 /* =========================================================
-   25. REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-
-        animation-iteration-count: 1 !important;
-
-        transition-duration: 0.01ms !important;
-
-        scroll-behavior: auto !important;
-    }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
+   27. ACCESSIBILITY
 ========================================================= */
 
 button:focus-visible,
@@ -3457,4 +4185,24 @@ input:focus-visible {
 .dashboard-notification,
 .dashboard-header .theme-toggle {
     will-change: transform;
+}
+
+
+/* =========================================================
+   28. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
 }
