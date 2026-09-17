@@ -1517,53 +1517,125 @@ footer {
 }
 
 
-/* ================================================= */
-/* DARK MODE */
-/* ================================================= */
-
-/* زر تغيير الوضع */
+/* =========================
+   THEME TOGGLE
+========================= */
 
 .theme-toggle {
-    width: 40px;
-    height: 40px;
-
+    position: relative;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid #D8E8DF;
+    border-radius: 50%;
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 1px solid #D8E8DF;
-    border-radius: 50%;
-
-    background-color: #FFFFFF;
-    color: #12372A;
-
-    font-size: 17px;
-
     cursor: pointer;
+    overflow: hidden;
 
     transition:
-        background-color 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.2s ease,
-        box-shadow 0.25s ease;
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.2s ease;
 }
 
 .theme-toggle:hover {
-    transform: translateY(-2px);
-
-    background-color: #F0F7F3;
-
-    border-color: #BFD8CC;
-
-    box-shadow:
-        0 6px 16px rgba(18, 55, 42, 0.08);
+    transform: translateY(-1px);
 }
 
 .theme-toggle:active {
-    transform: scale(0.92);
+    transform: scale(0.94);
 }
 
+/* الأيقونات */
+
+.theme-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    display: block;
+
+    transition:
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
+}
+
+/* الشمس */
+
+.theme-sun {
+    border: 2px solid #087F5B;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.3) rotate(-90deg);
+}
+
+.theme-sun::before,
+.theme-sun::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-top: 2px solid #087F5B;
+    border-bottom: 2px solid #087F5B;
+    border-radius: 50%;
+}
+
+.theme-sun::after {
+    transform: rotate(90deg);
+}
+
+/* القمر */
+
+.theme-moon {
+    background-color: #12372A;
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.theme-moon::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: -4px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+/* =========================
+   DARK MODE ICON
+========================= */
+
+body.dark-mode .theme-toggle {
+    background-color: #18251F;
+    border-color: #30443A;
+}
+
+body.dark-mode .theme-moon {
+    opacity: 0;
+    transform: scale(0.3) rotate(90deg);
+}
+
+body.dark-mode .theme-moon::after {
+    background-color: #18251F;
+}
+
+body.dark-mode .theme-sun {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+}
 
 /* ================================================= */
 /* Dark Mode Colors */
