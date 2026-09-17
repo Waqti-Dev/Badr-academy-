@@ -1,5 +1,6 @@
 /* =========================================================
    BADR ACADEMY — STYLE.CSS
+   Desktop preserved + Mobile Navbar + Dashboard isolation
 ========================================================= */
 
 /* =========================================================
@@ -108,6 +109,87 @@ header {
 
 .logo:hover::after {
     width: 34px;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   Hidden on Desktop
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: 1px solid #DCE9E2;
+    border-radius: 10px;
+
+    background-color: #FFFFFF;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.mobile-menu-button span {
+    display: block;
+
+    width: 18px;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background-color: #12372A;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.mobile-menu-button:hover {
+    background-color: #F3F8F5;
+
+    box-shadow:
+        0 5px 14px rgba(18, 55, 42, 0.08);
+}
+
+.mobile-menu-button:active {
+    transform: scale(0.94);
+}
+
+
+/* Hamburger → X */
+
+.mobile-menu-button.active span:nth-child(1) {
+    transform:
+        translateY(6px)
+        rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3) {
+    transform:
+        translateY(-6px)
+        rotate(-45deg);
 }
 
 
@@ -1893,9 +1975,6 @@ header,
    21. STUDENT DASHBOARD
 ========================================================= */
 
-
-/* Dashboard header */
-
 .dashboard-header {
     position: sticky;
     top: 0;
@@ -1921,9 +2000,6 @@ header,
         0 4px 18px rgba(18, 55, 42, 0.035);
 }
 
-
-/* Dashboard logo */
-
 .dashboard-logo {
     font-size: 20px;
     font-weight: 800;
@@ -1931,18 +2007,11 @@ header,
     color: #12372A;
 }
 
-
-/* Header actions */
-
 .dashboard-header-actions {
     display: flex;
     align-items: center;
-
     gap: 20px;
 }
-
-
-/* Notification */
 
 .dashboard-notification {
     width: 40px;
@@ -1973,9 +2042,6 @@ header,
     box-shadow:
         0 6px 16px rgba(18, 55, 42, 0.08);
 }
-
-
-/* Bell */
 
 .notification-icon {
     position: relative;
@@ -2025,15 +2091,13 @@ header,
 }
 
 
-/* Dashboard theme toggle */
+/* Dashboard theme */
 
 .dashboard-header .theme-toggle {
-    position: relative;
-
     width: 40px;
     height: 40px;
 
-    flex-shrink: 0;
+    min-width: 40px;
 
     padding: 0;
 
@@ -2050,7 +2114,7 @@ header,
 
     overflow: hidden;
 
-    z-index: 5;
+    flex-shrink: 0;
 }
 
 .dashboard-header .theme-toggle .theme-moon {
@@ -2085,32 +2149,6 @@ header,
     transform:
         scale(0.25)
         rotate(-120deg);
-}
-
-body.dark-mode .dashboard-header .theme-toggle {
-    background: #18251F;
-
-    border-color: #30443A;
-}
-
-body.dark-mode .dashboard-header .theme-moon {
-    opacity: 0;
-
-    transform:
-        scale(0.25)
-        rotate(120deg);
-}
-
-body.dark-mode .dashboard-header .theme-sun {
-    opacity: 1;
-
-    transform:
-        scale(1)
-        rotate(0deg);
-}
-
-body.dark-mode .dashboard-header .theme-moon::after {
-    background: #18251F;
 }
 
 
@@ -2174,9 +2212,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
     background: #FAFBF8;
 }
 
-
-/* Sidebar */
-
 .dashboard-sidebar {
     width: 240px;
 
@@ -2194,9 +2229,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
     justify-content: space-between;
 }
 
-
-/* Dashboard nav */
-
 .dashboard-nav {
     display: flex;
 
@@ -2207,16 +2239,19 @@ body.dark-mode .dashboard-header .theme-moon::after {
     gap: 6px;
 }
 
+.dashboard-nav > a {
+    position: static;
+
+    padding: 0 14px;
+
+    color: #66736D;
+
+    text-decoration: none;
+}
+
 .dashboard-nav > a::after {
     display: none;
 }
-
-.dashboard-nav > a {
-    position: static;
-}
-
-
-/* Dashboard nav link */
 
 .dashboard-nav-link {
     min-height: 46px;
@@ -2257,9 +2292,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
     color: #087F5B;
 }
 
-
-/* Nav icons */
-
 .nav-icon {
     width: 22px;
 
@@ -2268,9 +2300,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
 
     font-size: 17px;
 }
-
-
-/* Logout */
 
 .sidebar-logout {
     width: 100%;
@@ -2312,15 +2341,14 @@ body.dark-mode .dashboard-header .theme-moon::after {
 
     min-width: 0;
 
+    width: 100%;
+
     padding: 40px;
 
     max-width: 1400px;
 
     margin: 0 auto;
 }
-
-
-/* Welcome */
 
 .dashboard-welcome {
     margin-bottom: 30px;
@@ -2498,11 +2526,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
     line-height: 1.8;
 }
 
-
-/* =========================================================
-   CONTINUE LESSON
-========================================================= */
-
 .lesson-number {
     padding: 6px 10px;
 
@@ -2593,11 +2616,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
         0 7px 18px rgba(8, 127, 91, 0.18);
 }
 
-
-/* =========================================================
-   UPCOMING
-========================================================= */
-
 .upcoming-item {
     display: flex;
 
@@ -2660,11 +2678,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
 
     font-size: 11px;
 }
-
-
-/* =========================================================
-   WEAK TOPICS
-========================================================= */
 
 .weak-topic {
     display: flex;
@@ -2750,11 +2763,6 @@ body.dark-mode .dashboard-header .theme-moon::after {
 
     border-color: #C9DED4;
 }
-
-
-/* =========================================================
-   EXAM SCORE
-========================================================= */
 
 .exam-score {
     color: #087F5B;
@@ -2942,7 +2950,6 @@ body.dark-mode .exam-score {
             1px solid #E5EEE9;
     }
 
-
     /* Dashboard */
 
     .dashboard-sidebar {
@@ -2965,7 +2972,9 @@ body.dark-mode .exam-score {
 
 @media (max-width: 800px) {
 
-    /* Homepage header */
+    /* =========================
+       HOMEPAGE MOBILE HEADER
+    ========================= */
 
     header {
         min-height: 68px;
@@ -2973,27 +2982,120 @@ body.dark-mode .exam-score {
         padding: 0 5%;
     }
 
-    nav > a {
+    header > .mobile-menu-button {
+        display: flex;
+    }
+
+    header > nav {
+        position: absolute;
+
+        top: calc(100% + 10px);
+
+        left: 5%;
+        right: 5%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        padding: 10px;
+
+        background-color: #FFFFFF;
+
+        border: 1px solid #E1EBE6;
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 16px 40px rgba(18, 55, 42, 0.10);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform:
+            translateY(-8px)
+            scale(0.98);
+
+        transform-origin: top center;
+
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    header > nav.mobile-menu-open {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    header > nav > a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 14px;
+
+        border-radius: 9px;
+
+        color: #53645C;
+
+        font-size: 14px;
+    }
+
+    header > nav > a::after {
         display: none;
     }
 
-    nav {
-        gap: 12px;
+    header > nav > a:hover {
+        background-color: #F3F8F5;
+
+        color: #087F5B;
     }
 
-    .login-button {
-        padding: 9px 14px;
+    header > nav .language-switcher {
+        width: 100%;
 
-        font-size: 13px;
+        justify-content: center;
+
+        padding: 10px 0;
+
+        border-right: none;
+
+        border-top: 1px solid #EEF3F0;
+        border-bottom: 1px solid #EEF3F0;
+
+        margin: 4px 0;
     }
 
-    .theme-toggle {
-        width: 36px;
-        height: 36px;
+    header > nav .theme-toggle {
+        align-self: center;
+
+        margin: 5px 0;
+    }
+
+    header > nav .login-button {
+        width: 100%;
+
+        margin-top: 3px;
     }
 
 
-    /* Hero */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
         min-height: auto;
@@ -3020,7 +3122,9 @@ body.dark-mode .exam-score {
     }
 
 
-    /* Sections */
+    /* =========================
+       SECTIONS
+    ========================= */
 
     .why-badr,
     .curriculum,
@@ -3044,7 +3148,9 @@ body.dark-mode .exam-score {
     }
 
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================= */
 
     .final-cta {
         padding: 70px 6%;
@@ -3055,7 +3161,9 @@ body.dark-mode .exam-score {
     }
 
 
-    /* Footer */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
         padding: 45px 6% 25px;
@@ -3068,7 +3176,9 @@ body.dark-mode .exam-score {
     }
 
 
-    /* Auth */
+    /* =========================
+       AUTH
+    ========================= */
 
     .auth-card {
         padding: 30px 22px;
@@ -3090,7 +3200,9 @@ body.dark-mode .exam-score {
     }
 
 
-    /* Dashboard */
+    /* =========================
+       DASHBOARD MOBILE
+    ========================= */
 
     .dashboard-header {
         min-height: 64px;
@@ -3109,10 +3221,24 @@ body.dark-mode .exam-score {
         padding: 20px 10px;
     }
 
-    .dashboard-nav-link {
-        justify-content: center;
+    /*
+       IMPORTANT:
+       homepage rule nav > a { display:none; }
+       must NOT hide dashboard links.
+    */
+
+    .dashboard-nav > a.dashboard-nav-link {
+        display: flex;
+
+        width: 100%;
 
         padding: 0;
+
+        position: static;
+    }
+
+    .dashboard-nav-link {
+        justify-content: center;
     }
 
     .dashboard-nav-link span:last-child {
@@ -3139,6 +3265,10 @@ body.dark-mode .exam-score {
         grid-template-columns: 1fr;
     }
 
+    .dashboard-main-grid {
+        grid-template-columns: 1fr;
+    }
+
     .dashboard-lower-grid {
         grid-template-columns: 1fr;
     }
@@ -3150,6 +3280,8 @@ body.dark-mode .exam-score {
     .dashboard-header .theme-toggle {
         width: 36px;
         height: 36px;
+
+        min-width: 36px;
     }
 
     .dashboard-notification {
@@ -3207,6 +3339,49 @@ body.dark-mode .exam-score {
 
 
 /* =========================================================
+   DARK MODE — MOBILE NAV
+========================================================= */
+
+body.dark-mode .mobile-menu-button {
+    background-color: #18251F;
+
+    border-color: #30443A;
+}
+
+body.dark-mode .mobile-menu-button span {
+    background-color: #E8F0EC;
+}
+
+body.dark-mode .mobile-menu-button:hover {
+    background-color: #213129;
+}
+
+body.dark-mode header > nav {
+    background-color: #121D18;
+
+    border-color: #26372F;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.30);
+}
+
+body.dark-mode header > nav > a {
+    color: #AABBB3;
+}
+
+body.dark-mode header > nav > a:hover {
+    background-color: #1A2922;
+
+    color: #55C995;
+}
+
+body.dark-mode header > nav .language-switcher {
+    border-top-color: #26372F;
+    border-bottom-color: #26372F;
+}
+
+
+/* =========================================================
    25. REDUCED MOTION
 ========================================================= */
 
@@ -3224,404 +3399,19 @@ body.dark-mode .exam-score {
         scroll-behavior: auto !important;
     }
 }
-/* =========================================================
-   BADR ACADEMY — FINAL FIXES
-   Dashboard + Theme Toggle + Responsive
-========================================================= */
 
 
 /* =========================================================
-   DASHBOARD HEADER ISOLATION
+   ACCESSIBILITY
 ========================================================= */
 
-.dashboard-header {
-    min-height: 72px;
-    height: 72px;
-
-    padding: 0 32px;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: rgba(255, 255, 255, 0.92);
-
-    border-bottom: 1px solid #E5EEE9;
-
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    box-shadow:
-        0 4px 18px rgba(18, 55, 42, 0.035);
-}
-
-
-/* Don't let homepage nav styling affect dashboard */
-
-.dashboard-nav {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    gap: 6px;
-}
-
-.dashboard-nav > a {
-    position: static;
-
-    padding: 0 14px;
-
-    color: #66736D;
-
-    text-decoration: none;
-}
-
-.dashboard-nav > a::after {
-    display: none;
-}
-
-
-/* =========================================================
-   DASHBOARD THEME TOGGLE
-========================================================= */
-
-.dashboard-header .theme-toggle {
-    position: relative;
-
-    width: 40px;
-    height: 40px;
-
-    min-width: 40px;
-
-    padding: 0;
-
-    border: 1px solid #DCE9E2;
-
-    border-radius: 50%;
-
-    background-color: #FFFFFF;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    cursor: pointer;
-
-    flex-shrink: 0;
-
-    transition:
-        background-color 0.35s ease,
-        border-color 0.35s ease,
-        transform 0.2s ease,
-        box-shadow 0.35s ease;
-}
-
-.dashboard-header .theme-toggle:hover {
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 5px 14px rgba(18, 55, 42, 0.08);
-}
-
-.dashboard-header .theme-toggle:active {
-    transform: scale(0.93);
-}
-
-
-/* Moon */
-
-.dashboard-header .theme-toggle .theme-moon {
-    position: absolute;
-
-    width: 16px;
-    height: 16px;
-
-    border-radius: 50%;
-
-    background-color: #12372A;
-
-    opacity: 1;
-
-    transform: scale(1) rotate(0deg);
-
-    transition:
-        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.35s ease;
-}
-
-.dashboard-header .theme-toggle .theme-moon::after {
-    content: "";
-
-    position: absolute;
-
-    width: 15px;
-    height: 15px;
-
-    top: -4px;
-    right: -4px;
-
-    border-radius: 50%;
-
-    background-color: #FFFFFF;
-}
-
-
-/* Sun */
-
-.dashboard-header .theme-toggle .theme-sun {
-    position: absolute;
-
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    background-color: #F4B942;
-
-    opacity: 0;
-
-    transform: scale(0.25) rotate(-120deg);
-
-    transition:
-        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.35s ease;
-}
-
-
-/* Dark mode */
-
-body.dark-mode .dashboard-header .theme-toggle {
-    background-color: #18251F;
-
-    border-color: #30443A;
-}
-
-body.dark-mode .dashboard-header .theme-toggle .theme-moon {
-    opacity: 0;
-
-    transform:
-        scale(0.25)
-        rotate(120deg);
-}
-
-body.dark-mode .dashboard-header .theme-toggle .theme-moon::after {
-    background-color: #18251F;
-}
-
-body.dark-mode .dashboard-header .theme-toggle .theme-sun {
-    opacity: 1;
-
-    transform:
-        scale(1)
-        rotate(0deg);
-}
-
-
-/* =========================================================
-   DASHBOARD DARK MODE — EXTRA FIXES
-========================================================= */
-
-body.dark-mode .dashboard-header-actions {
-    color: #E8F0EC;
-}
-
-body.dark-mode .dashboard-notification {
-    background-color: #18251F;
-
-    border-color: #30443A;
-}
-
-body.dark-mode .dashboard-notification:hover {
-    background-color: #213129;
-}
-
-body.dark-mode .dashboard-sidebar {
-    background-color: #121D18;
-
-    border-left-color: #26372F;
-}
-
-body.dark-mode .dashboard-nav-link {
-    color: #91A39A;
-}
-
-body.dark-mode .dashboard-nav-link:hover {
-    background-color: #1A2922;
-
-    color: #E8F0EC;
-}
-
-body.dark-mode .dashboard-nav-link.active {
-    background-color: #1D352A;
-
-    color: #6BC5A5;
-}
-
-body.dark-mode .sidebar-logout {
-    background-color: transparent;
-
-    border-color: #30443A;
-
-    color: #91A39A;
-}
-
-body.dark-mode .sidebar-logout:hover {
-    background-color: #1A2922;
-
-    color: #E8F0EC;
-}
-
-
-/* =========================================================
-   DASHBOARD LIGHT MODE FIX
-========================================================= */
-
-.dashboard-sidebar {
-    align-items: stretch;
-}
-
-.dashboard-content {
-    width: 100%;
-}
-
-
-/* =========================================================
-   MOBILE DASHBOARD
-========================================================= */
-
-@media (max-width: 800px) {
-
-    .dashboard-header {
-        min-height: 64px;
-        height: 64px;
-
-        padding: 0 18px;
-    }
-
-    .dashboard-header-actions {
-        gap: 10px;
-    }
-
-    .dashboard-header .theme-toggle {
-        width: 36px;
-        height: 36px;
-
-        min-width: 36px;
-    }
-
-    .dashboard-notification {
-        width: 36px;
-        height: 36px;
-    }
-
-    .dashboard-sidebar {
-        width: 72px;
-
-        padding: 20px 10px;
-    }
-
-    .dashboard-nav-link {
-        justify-content: center;
-
-        padding: 0;
-    }
-
-    .dashboard-nav-link span:last-child {
-        display: none;
-    }
-
-    .sidebar-logout {
-        font-size: 0;
-
-        padding: 10px;
-    }
-
-    .sidebar-logout::after {
-        content: "↪";
-
-        font-size: 16px;
-    }
-
-    .dashboard-content {
-        padding: 25px 18px;
-    }
-
-    .dashboard-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .dashboard-main-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .dashboard-lower-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .student-mini-info {
-        display: none;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL SCREENS
-========================================================= */
-
-@media (max-width: 500px) {
-
-    .dashboard-header {
-        padding: 0 14px;
-    }
-
-    .dashboard-header-actions {
-        gap: 8px;
-    }
-
-    .dashboard-sidebar {
-        width: 62px;
-    }
-
-    .dashboard-content {
-        padding: 22px 14px;
-    }
-
-    .dashboard-welcome h1 {
-        font-size: 24px;
-    }
-
-    .dashboard-card {
-        padding: 18px;
-    }
-
-    .dashboard-card h2 {
-        font-size: 18px;
-    }
-
-    .dashboard-header .theme-toggle {
-        width: 36px;
-        height: 36px;
-
-        min-width: 36px;
-    }
-
-    .dashboard-notification {
-        width: 36px;
-        height: 36px;
-    }
-
-    .student-avatar {
-        width: 36px;
-        height: 36px;
-    }
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline:
+        3px solid rgba(8, 127, 91, 0.25);
+
+    outline-offset: 3px;
 }
 
 
@@ -3635,17 +3425,4 @@ body.dark-mode .sidebar-logout:hover {
 .dashboard-notification,
 .dashboard-header .theme-toggle {
     will-change: transform;
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible {
-    outline: 3px solid rgba(8, 127, 91, 0.25);
-
-    outline-offset: 3px;
 }
