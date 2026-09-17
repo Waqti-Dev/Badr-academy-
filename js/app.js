@@ -180,35 +180,24 @@ if (navbarLogin) {
         openAuthModal
     );
 }
-// =========================================
-// 5. Dark Mode
-// =========================================
+// =========================
+// DARK MODE
+// =========================
 
 const themeToggle =
     document.getElementById("theme-toggle");
 
-
-// تطبيق الوضع المحفوظ
 const savedTheme =
     localStorage.getItem("badr-theme");
 
 if (savedTheme === "dark") {
-
     document.body.classList.add("dark-mode");
-
-    if (themeToggle) {
-        themeToggle.textContent = "☀️";
-    }
 }
 
-
-// تغيير الوضع
 if (themeToggle) {
-
     themeToggle.addEventListener(
         "click",
         () => {
-
             document.body.classList.toggle(
                 "dark-mode"
             );
@@ -219,24 +208,16 @@ if (themeToggle) {
                 );
 
             if (isDark) {
-
-                themeToggle.textContent = "☀️";
-
                 localStorage.setItem(
                     "badr-theme",
                     "dark"
                 );
-
             } else {
-
-                themeToggle.textContent = "🌙";
-
                 localStorage.setItem(
                     "badr-theme",
                     "light"
                 );
             }
-
         }
     );
 }
