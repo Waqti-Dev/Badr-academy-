@@ -2,22 +2,17 @@
 // 1. SCROLL REVEAL
 // =========================================
 
-// نجيب كل العناصر اللي عليها reveal
 const revealElements = document.querySelectorAll(".reveal");
 
-// نراقب العناصر أثناء النزول في الصفحة
 const revealObserver = new IntersectionObserver(
     (entries) => {
 
         entries.forEach((entry) => {
 
-            // لما العنصر يدخل الشاشة
             if (entry.isIntersecting) {
 
-                // نشغل الـ animation
                 entry.target.classList.add("show");
 
-                // نوقف مراقبة العنصر بعد ظهوره
                 revealObserver.unobserve(entry.target);
             }
 
@@ -30,7 +25,6 @@ const revealObserver = new IntersectionObserver(
 );
 
 
-// نبدأ مراقبة كل العناصر
 revealElements.forEach((element) => {
     revealObserver.observe(element);
 });
@@ -41,24 +35,17 @@ revealElements.forEach((element) => {
 // 2. زر استكشف المنهج
 // =========================================
 
-// زر استكشف المنهج الموجود في الـHero
-const exploreCurriculum = document.getElementById(
-    "explore-curriculum"
-);
+const exploreCurriculum =
+    document.getElementById("explore-curriculum");
+
+const exploreCurriculumCard =
+    document.getElementById("explore-curriculum-card");
 
 
-// زر استكشف المنهج الموجود في الـHero Card
-const exploreCurriculumCard = document.getElementById(
-    "explore-curriculum-card"
-);
-
-
-// وظيفة الانتقال إلى قسم المنهج
 function goToCurriculum() {
 
-    const curriculumSection = document.getElementById(
-        "curriculum"
-    );
+    const curriculumSection =
+        document.getElementById("curriculum");
 
     curriculumSection.scrollIntoView({
         behavior: "smooth"
@@ -66,15 +53,116 @@ function goToCurriculum() {
 }
 
 
-// تشغيل الوظيفة عند الضغط على زر الـHero
 exploreCurriculum.addEventListener(
     "click",
     goToCurriculum
 );
 
 
-// تشغيل الوظيفة عند الضغط على زر الـCard
 exploreCurriculumCard.addEventListener(
     "click",
     goToCurriculum
+);
+
+
+
+// =========================================
+// 3. LOGIN MODAL
+// =========================================
+
+const authModal =
+    document.getElementById("auth-modal");
+
+const authOverlay =
+    document.getElementById("auth-overlay");
+
+const authClose =
+    document.getElementById("auth-close");
+
+const startLearningButtons =
+    document.querySelectorAll(".start-learning-button");
+
+
+// فتح نافذة تسجيل الدخول
+function openAuthModal() {
+
+    authModal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+// إغلاق نافذة تسجيل الدخول
+function closeAuthModal() {
+
+    authModal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+// أزرار ابدأ التعلم
+startLearningButtons.forEach((button) => {
+
+    button.addEventListener(
+        "click",
+        openAuthModal
+    );
+
+});
+
+
+// زر X
+authClose.addEventListener(
+    "click",
+    closeAuthModal
+);
+
+
+// الضغط على الخلفية
+authOverlay.addEventListener(
+    "click",
+    closeAuthModal
+);
+
+
+
+// =========================================
+// 4. زر ESC للإغلاق
+// =========================================
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (event.key === "Escape") {
+
+            closeAuthModal();
+
+        }
+
+    }
+);
+
+
+
+// =========================================
+// 5. نموذج تسجيل الدخول
+// =========================================
+
+const loginForm =
+    document.getElementById("login-form");
+
+
+loginForm.addEventListener(
+    "submit",
+    (event) => {
+
+        event.preventDefault();
+
+        alert(
+            "واجهة تسجيل الدخول جاهزة. سنربطها بالحسابات وقاعدة البيانات لاحقًا."
+        );
+
+    }
 );
