@@ -1029,6 +1029,195 @@ footer {
 .reveal-delay-3 {
     transition-delay: 0.15s;
 }
+/* ================================================= */
+/* AUTH MODAL */
+/* ================================================= */
+
+.auth-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.auth-modal.active {
+    display: flex;
+}
+
+.auth-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(18, 55, 42, 0.45);
+
+    backdrop-filter: blur(6px);
+}
+
+.auth-card {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    max-width: 450px;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(18, 55, 42, 0.18);
+
+    animation: authModalReveal 0.3s ease forwards;
+}
+
+.auth-close {
+    position: absolute;
+
+    top: 15px;
+    left: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background-color: #F0F5F2;
+
+    color: #12372A;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.auth-close:hover {
+    background-color: #E5EEE9;
+
+    transform: rotate(90deg);
+}
+
+.auth-card .section-label {
+    margin-bottom: 15px;
+}
+
+.auth-card h2 {
+    margin: 0 0 12px;
+
+    color: #12372A;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+}
+
+.auth-card > p {
+    color: #66736D;
+
+    margin: 0 0 25px;
+
+    line-height: 1.8;
+}
+
+#login-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#login-form label {
+    color: #12372A;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+}
+
+#login-form input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #D8E8DF;
+
+    border-radius: 9px;
+
+    background-color: #FAFBF8;
+
+    color: #12372A;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#login-form input:focus {
+    border-color: #087F5B;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 127, 91, 0.10);
+}
+
+.auth-submit {
+    width: 100%;
+
+    margin-top: 12px;
+}
+
+.auth-note {
+    text-align: center;
+
+    font-size: 13px !important;
+
+    margin: 18px 0 0 !important;
+
+    color: #7B8781 !important;
+}
+
+
+@keyframes authModalReveal {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+}
 
 
 /* ================================================= */
@@ -1139,7 +1328,14 @@ footer {
 
     .footer-links {
         flex-wrap: wrap;
-    }
+    } 
+  .auth-card {
+    padding: 30px 22px;
+}
+
+.auth-card h2 {
+    font-size: 25px;
+}
 }
 
 
