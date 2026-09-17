@@ -1,15 +1,7 @@
 const revealElements = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-    revealElements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
+console.log("Reveal elements:", revealElements.length);
 
-        if (elementTop < window.innerHeight - 80) {
-            element.classList.add("reveal-active");
-        }
-    });
-}
-
-revealOnScroll();
-
-window.addEventListener("scroll", revealOnScroll);
+revealElements.forEach((element) => {
+    element.classList.add("reveal-active");
+});
