@@ -1,3 +1,7 @@
+// =========================================
+// 1. SCROLL REVEAL
+// =========================================
+
 // نجيب كل العناصر اللي عليها reveal
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -21,7 +25,6 @@ const revealObserver = new IntersectionObserver(
 
     },
     {
-        // يبدأ الـ animation لما حوالي 15% من العنصر يظهر
         threshold: 0.15
     }
 );
@@ -31,3 +34,47 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((element) => {
     revealObserver.observe(element);
 });
+
+
+
+// =========================================
+// 2. زر استكشف المنهج
+// =========================================
+
+// زر استكشف المنهج الموجود في الـHero
+const exploreCurriculum = document.getElementById(
+    "explore-curriculum"
+);
+
+
+// زر استكشف المنهج الموجود في الـHero Card
+const exploreCurriculumCard = document.getElementById(
+    "explore-curriculum-card"
+);
+
+
+// وظيفة الانتقال إلى قسم المنهج
+function goToCurriculum() {
+
+    const curriculumSection = document.getElementById(
+        "curriculum"
+    );
+
+    curriculumSection.scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+// تشغيل الوظيفة عند الضغط على زر الـHero
+exploreCurriculum.addEventListener(
+    "click",
+    goToCurriculum
+);
+
+
+// تشغيل الوظيفة عند الضغط على زر الـCard
+exploreCurriculumCard.addEventListener(
+    "click",
+    goToCurriculum
+);
