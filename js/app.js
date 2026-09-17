@@ -95,9 +95,14 @@ function openAuthModal() {
 // إغلاق نافذة تسجيل الدخول
 function closeAuthModal() {
 
+    if (!authModal) return;
+
     authModal.classList.remove("active");
 
-    document.body.style.overflow = "";
+    // نرجع الـ scroll بعد انتهاء الأنيميشن
+    setTimeout(() => {
+        document.body.style.overflow = "";
+    }, 400);
 }
 
 
