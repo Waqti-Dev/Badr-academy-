@@ -171,6 +171,15 @@ loginForm.addEventListener(
 
     }
 );
+const navbarLogin =
+    document.getElementById("navbar-login");
+
+if (navbarLogin) {
+    navbarLogin.addEventListener(
+        "click",
+        openAuthModal
+    );
+}
 // =========================================
 // 5. Dark Mode
 // =========================================
