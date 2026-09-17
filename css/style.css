@@ -1,6 +1,10 @@
-/* ================================================= */
-/* 1. الإعدادات الأساسية */
-/* ================================================= */
+/* =========================================================
+   BADR ACADEMY — STYLE.CSS
+========================================================= */
+
+/* =========================================================
+   1. BASIC SETTINGS
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -18,10 +22,14 @@ body {
     line-height: 1.6;
 }
 
+button {
+    font-family: inherit;
+}
 
-/* ================================================= */
-/* 2. الهيدر - PREMIUM NAVBAR */
-/* ================================================= */
+
+/* =========================================================
+   2. PREMIUM NAVBAR
+========================================================= */
 
 header {
     position: sticky;
@@ -29,7 +37,6 @@ header {
     z-index: 1000;
 
     min-height: 76px;
-
     padding: 0 7%;
 
     display: flex;
@@ -46,8 +53,7 @@ header {
     box-shadow:
         0 4px 18px rgba(18, 55, 42, 0.035);
 
-    animation:
-        headerReveal 0.55s ease forwards;
+    animation: headerReveal 0.55s ease forwards;
 
     transition:
         background-color 0.3s ease,
@@ -56,9 +62,9 @@ header {
 }
 
 
-/* ================================================= */
-/* Logo */
-/* ================================================= */
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
     position: relative;
@@ -69,7 +75,6 @@ header {
     font-weight: 800;
 
     letter-spacing: -0.4px;
-
     white-space: nowrap;
 
     cursor: default;
@@ -94,8 +99,7 @@ header {
 
     border-radius: 10px;
 
-    transition:
-        width 0.3s ease;
+    transition: width 0.3s ease;
 }
 
 .logo:hover {
@@ -107,14 +111,13 @@ header {
 }
 
 
-/* ================================================= */
-/* Navigation */
-/* ================================================= */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 nav {
     display: flex;
     align-items: center;
-
     gap: 26px;
 }
 
@@ -130,8 +133,7 @@ nav > a {
 
     text-decoration: none;
 
-    transition:
-        color 0.25s ease;
+    transition: color 0.25s ease;
 }
 
 nav > a::after {
@@ -162,16 +164,15 @@ nav > a:hover::after {
 }
 
 
-/* ================================================= */
-/* 3. اللغة */
-/* ================================================= */
+/* =========================================================
+   3. LANGUAGE SWITCHER
+========================================================= */
 
 .language-switcher {
     display: flex;
     align-items: center;
 
     gap: 7px;
-
     padding-right: 5px;
 
     border-right: 1px solid #DCE8E2;
@@ -181,20 +182,17 @@ nav > a:hover::after {
     padding: 5px 2px;
 
     border: none;
-
     background: transparent;
 
     color: #7A8881;
 
     font-family: inherit;
-
     font-size: 13px;
     font-weight: 600;
 
     cursor: pointer;
 
-    transition:
-        color 0.25s ease;
+    transition: color 0.25s ease;
 }
 
 .language-switcher button:hover,
@@ -208,25 +206,17 @@ nav > a:hover::after {
 
 .language-switcher span {
     color: #C5D2CC;
-
     font-size: 12px;
 }
 
 
-/* ================================================= */
-/* 4. الأزرار العامة */
-/* ================================================= */
-
-button {
-    font-family: inherit;
-}
-
-
-/* زر ابدأ التعلم */
+/* =========================================================
+   4. GENERAL BUTTONS
+========================================================= */
 
 .primary-button {
     background-color: #087F5B;
-    color: white;
+    color: #FFFFFF;
 
     border: none;
 
@@ -235,6 +225,7 @@ button {
     border-radius: 9px;
 
     font-size: 16px;
+
     cursor: pointer;
 
     transition:
@@ -257,10 +248,8 @@ button {
 }
 
 
-/* زر استكشف المنهج */
-
 .secondary-button {
-    background-color: white;
+    background-color: #FFFFFF;
     color: #087F5B;
 
     border: 1px solid #D8E8DF;
@@ -270,6 +259,7 @@ button {
     border-radius: 9px;
 
     font-size: 16px;
+
     cursor: pointer;
 
     transition:
@@ -288,15 +278,14 @@ button {
 }
 
 
-/* ================================================= */
-/* 5. زر تسجيل الدخول في الـNavbar */
-/* ================================================= */
+/* =========================================================
+   5. LOGIN BUTTON
+========================================================= */
 
 .login-button {
     padding: 10px 19px;
 
     border: 1px solid #087F5B;
-
     border-radius: 9px;
 
     background-color: #087F5B;
@@ -334,9 +323,9 @@ button {
 }
 
 
-/* ================================================= */
-/* 6. Hero */
-/* ================================================= */
+/* =========================================================
+   6. HERO
+========================================================= */
 
 .hero {
     min-height: calc(100vh - 75px);
@@ -362,7 +351,6 @@ button {
     height: 450px;
 
     border: 1px solid #EAF4EF;
-
     border-radius: 50%;
 
     left: -220px;
@@ -406,7 +394,6 @@ button {
     margin: 0;
 
     font-size: 52px;
-
     line-height: 1.2;
 
     color: #12372A;
@@ -444,7 +431,6 @@ button {
 
 .hero-actions {
     display: flex;
-
     gap: 12px;
 
     opacity: 0;
@@ -456,21 +442,19 @@ button {
 }
 
 
-/* ================================================= */
-/* 7. Hero Card */
-/* ================================================= */
+/* =========================================================
+   7. HERO CARD
+========================================================= */
 
 .hero-card {
     width: 330px;
-
     flex-shrink: 0;
 
-    background-color: white;
+    background-color: #FFFFFF;
 
     padding: 28px;
 
     border-radius: 18px;
-
     border: 1px solid #E5EEE9;
 
     box-shadow:
@@ -595,8 +579,7 @@ button {
     padding: 12px;
 
     background-color: #12372A;
-
-    color: white;
+    color: #FFFFFF;
 
     border: none;
 
@@ -618,9 +601,9 @@ button {
 }
 
 
-/* ================================================= */
-/* 8. إعدادات الـSections المشتركة */
-/* ================================================= */
+/* =========================================================
+   8. SECTIONS
+========================================================= */
 
 .why-badr,
 .curriculum,
@@ -642,7 +625,6 @@ button {
     display: inline-block;
 
     color: #087F5B;
-
     background-color: #EAF4EF;
 
     padding: 6px 12px;
@@ -650,7 +632,6 @@ button {
     border-radius: 20px;
 
     font-size: 13px;
-
     font-weight: bold;
 
     margin-bottom: 14px;
@@ -662,7 +643,6 @@ button {
     color: #12372A;
 
     font-size: 38px;
-
     line-height: 1.3;
 }
 
@@ -672,17 +652,16 @@ button {
     color: #66736D;
 
     font-size: 17px;
-
     line-height: 1.9;
 }
 
 
-/* ================================================= */
-/* 9. لماذا Badr */
-/* ================================================= */
+/* =========================================================
+   9. WHY BADR
+========================================================= */
 
 .why-badr {
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 .features {
@@ -697,7 +676,6 @@ button {
     padding: 28px;
 
     border: 1px solid #E5EEE9;
-
     border-radius: 16px;
 
     background-color: #FAFBF8;
@@ -718,7 +696,6 @@ button {
     color: #087F5B;
 
     font-weight: bold;
-
     font-size: 14px;
 }
 
@@ -741,9 +718,9 @@ button {
 }
 
 
-/* ================================================= */
-/* 10. المنهج */
-/* ================================================= */
+/* =========================================================
+   10. CURRICULUM
+========================================================= */
 
 .curriculum {
     background-color: #FAFBF8;
@@ -761,7 +738,6 @@ button {
     color: #087F5B;
 
     font-size: 14px;
-
     font-weight: bold;
 }
 
@@ -782,12 +758,11 @@ button {
 }
 
 .unit-card {
-    background-color: white;
+    background-color: #FFFFFF;
 
     padding: 28px;
 
     border: 1px solid #E5EEE9;
-
     border-radius: 16px;
 
     transition:
@@ -806,7 +781,6 @@ button {
     display: inline-block;
 
     color: #087F5B;
-
     background-color: #EAF4EF;
 
     padding: 5px 9px;
@@ -814,7 +788,6 @@ button {
     border-radius: 7px;
 
     font-size: 12px;
-
     font-weight: bold;
 }
 
@@ -822,7 +795,6 @@ button {
     margin: 16px 0 10px;
 
     font-size: 20px;
-
     line-height: 1.5;
 
     color: #12372A;
@@ -834,17 +806,16 @@ button {
     color: #66736D;
 
     font-size: 14px;
-
     line-height: 1.8;
 }
 
 
-/* ================================================= */
-/* 11. نظام الدراسة */
-/* ================================================= */
+/* =========================================================
+   11. STUDY SYSTEM
+========================================================= */
 
 .study-system {
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 .study-steps {
@@ -869,7 +840,6 @@ button {
     color: #087F5B;
 
     font-weight: bold;
-
     font-size: 14px;
 }
 
@@ -887,19 +857,18 @@ button {
     color: #66736D;
 
     font-size: 14px;
-
     line-height: 1.8;
 }
 
 
-/* ================================================= */
-/* 12. متابعة المستوى */
-/* ================================================= */
+/* =========================================================
+   12. PROGRESS
+========================================================= */
 
 .progress-section {
     background-color: #12372A;
 
-    color: white;
+    color: #FFFFFF;
 
     position: relative;
 
@@ -930,7 +899,6 @@ button {
     color: #C9D8D1;
 
     font-size: 17px;
-
     line-height: 1.9;
 
     margin-bottom: 25px;
@@ -943,18 +911,18 @@ button {
 }
 
 
-/* ================================================= */
-/* 13. لمن الأكاديمية؟ */
-/* ================================================= */
+/* =========================================================
+   13. STUDENTS
+========================================================= */
 
 .students-section {
     background-color: #FAFBF8;
 }
 
 
-/* ================================================= */
-/* 14. CTA النهائي */
-/* ================================================= */
+/* =========================================================
+   14. FINAL CTA
+========================================================= */
 
 .final-cta {
     padding: 90px 9%;
@@ -980,19 +948,18 @@ button {
     color: #66736D;
 
     font-size: 17px;
-
     line-height: 1.8;
 }
 
 
-/* ================================================= */
-/* 15. Footer */
-/* ================================================= */
+/* =========================================================
+   15. FOOTER
+========================================================= */
 
 footer {
     background-color: #12372A;
 
-    color: white;
+    color: #FFFFFF;
 
     padding: 55px 9% 25px;
 
@@ -1057,59 +1024,50 @@ footer {
 }
 
 
-/* ================================================= */
-/* 16. Animations الأساسية */
-/* ================================================= */
+/* =========================================================
+   16. ANIMATIONS
+========================================================= */
 
 @keyframes fadeUp {
-
     from {
         opacity: 0;
-
         transform: translateY(18px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 }
 
 @keyframes cardReveal {
-
     from {
         opacity: 0;
-
         transform: translateX(30px);
     }
 
     to {
         opacity: 1;
-
         transform: translateX(0);
     }
 }
 
 @keyframes headerReveal {
-
     from {
         opacity: 0;
-
         transform: translateY(-12px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 }
 
 
-/* ================================================= */
-/* 17. Scroll Reveal */
-/* ================================================= */
+/* =========================================================
+   17. SCROLL REVEAL
+========================================================= */
 
 .reveal {
     opacity: 0;
@@ -1140,9 +1098,9 @@ footer {
 }
 
 
-/* ================================================= */
-/* 18. AUTH MODAL */
-/* ================================================= */
+/* =========================================================
+   18. AUTH MODAL
+========================================================= */
 
 .auth-modal {
     position: fixed;
@@ -1194,10 +1152,9 @@ footer {
     z-index: 1;
 
     width: 100%;
-
     max-width: 450px;
 
-    background-color: white;
+    background-color: #FFFFFF;
 
     padding: 35px;
 
@@ -1229,11 +1186,9 @@ footer {
     position: absolute;
 
     top: 15px;
-
     left: 18px;
 
     width: 35px;
-
     height: 35px;
 
     border: none;
@@ -1245,7 +1200,6 @@ footer {
     border-radius: 50%;
 
     font-size: 24px;
-
     line-height: 1;
 
     cursor: pointer;
@@ -1279,7 +1233,6 @@ footer {
     color: #12372A;
 
     font-size: 30px;
-
     line-height: 1.3;
 }
 
@@ -1292,9 +1245,9 @@ footer {
 }
 
 
-/* ================================================= */
-/* Login Form */
-/* ================================================= */
+/* =========================================================
+   LOGIN FORM
+========================================================= */
 
 #login-form {
     display: flex;
@@ -1362,172 +1315,24 @@ footer {
 }
 
 
-/* ================================================= */
-/* 19. الموبايل */
-/* ================================================= */
-
-@media (max-width: 1000px) {
-
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .units-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .study-steps {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .study-step {
-        border-right: none;
-
-        border-bottom:
-            1px solid #E5EEE9;
-    }
-}
-
-
-@media (max-width: 800px) {
-
-    header {
-        min-height: 68px;
-
-        padding: 0 5%;
-    }
-
-    nav > a {
-        display: none;
-    }
-
-    nav {
-        gap: 12px;
-    }
-
-    .login-button {
-        padding: 9px 14px;
-
-        font-size: 13px;
-    }
-
-    .hero {
-        min-height: auto;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        padding: 55px 6%;
-
-        gap: 45px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-content > p {
-        font-size: 16px;
-    }
-
-    .hero-card {
-        width: 100%;
-    }
-
-    .why-badr,
-    .curriculum,
-    .study-system,
-    .progress-section,
-    .students-section {
-        padding: 75px 6%;
-    }
-
-    .section-heading h2 {
-        font-size: 30px;
-    }
-
-    .features,
-    .units-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .study-steps {
-        grid-template-columns: 1fr;
-    }
-
-    .final-cta {
-        padding: 70px 6%;
-    }
-
-    .final-cta h2 {
-        font-size: 32px;
-    }
-
-    footer {
-        padding: 45px 6% 25px;
-
-        grid-template-columns: 1fr;
-    }
-
-    .footer-links {
-        flex-wrap: wrap;
-    }
-
-    .auth-card {
-        padding: 30px 22px;
-
-        border-radius: 18px;
-    }
-
-    .auth-card h2 {
-        font-size: 25px;
-    }
-
-    .auth-close {
-        top: 13px;
-
-        left: 15px;
-
-        width: 34px;
-
-        height: 34px;
-    }
-}
-
-
-/* ================================================= */
-/* 20. تقليل الحركة */
-/* ================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-
-        animation-duration: 0.01ms !important;
-
-        animation-iteration-count: 1 !important;
-
-        transition-duration: 0.01ms !important;
-
-        scroll-behavior: auto !important;
-    }
-}
-
-
-/* =========================
-   PREMIUM THEME TOGGLE
-========================= */
+/* =========================================================
+   19. THEME TOGGLE
+========================================================= */
 
 .theme-toggle {
     position: relative;
+
     width: 40px;
     height: 40px;
+
+    flex-shrink: 0;
+
     padding: 0;
+
     border: 1px solid #DCE9E2;
+
     border-radius: 50%;
+
     background: #FFFFFF;
 
     display: flex;
@@ -1535,7 +1340,10 @@ footer {
     justify-content: center;
 
     cursor: pointer;
+
     overflow: hidden;
+
+    z-index: 5;
 
     transition:
         background-color 0.35s ease,
@@ -1546,23 +1354,17 @@ footer {
 
 .theme-toggle:hover {
     transform: translateY(-1px);
-    box-shadow: 0 5px 14px rgba(18, 55, 42, 0.08);
+
+    box-shadow:
+        0 5px 14px rgba(18, 55, 42, 0.08);
 }
 
 .theme-toggle:active {
     transform: scale(0.93);
 }
 
-
-/* =========================
-   ICON BASE
-========================= */
-
 .theme-icon {
     position: absolute;
-
-    width: 17px;
-    height: 17px;
 
     display: block;
 
@@ -1570,9 +1372,9 @@ footer {
         transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.35s ease;
 }
-/* =========================
-   MOON ICON
-========================= */
+
+
+/* Moon */
 
 .theme-moon {
     width: 16px;
@@ -1587,13 +1389,7 @@ footer {
     transform:
         scale(1)
         rotate(0deg);
-
-    transition:
-        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.35s ease;
 }
-
-/* الجزء المقطوع من القمر */
 
 .theme-moon::after {
     content: "";
@@ -1611,57 +1407,50 @@ footer {
     background-color: #FFFFFF;
 }
 
-/* =========================
-   SUN ICON
-========================= */
+
+/* Sun */
 
 .theme-sun {
-    position: absolute;
-
     width: 13px;
     height: 13px;
 
     border-radius: 50%;
+
     background: #F4B942;
 
     opacity: 0;
-    transform: scale(0.25) rotate(-120deg);
 
-    transition:
-        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.35s ease;
+    transform:
+        scale(0.25)
+        rotate(-120deg);
 }
-
-
-/* أشعة الشمس */
 
 .theme-sun::before {
     content: "";
 
     position: absolute;
+
     inset: -5px;
 
     background:
         linear-gradient(#F4B942, #F4B942)
-            center top / 2px 4px no-repeat,
+        center top / 2px 4px no-repeat,
 
         linear-gradient(#F4B942, #F4B942)
-            center bottom / 2px 4px no-repeat,
+        center bottom / 2px 4px no-repeat,
 
         linear-gradient(#F4B942, #F4B942)
-            left center / 4px 2px no-repeat,
+        left center / 4px 2px no-repeat,
 
         linear-gradient(#F4B942, #F4B942)
-            right center / 4px 2px no-repeat;
+        right center / 4px 2px no-repeat;
 }
-
-
-/* الأشعة القطرية */
 
 .theme-sun::after {
     content: "";
 
     position: absolute;
+
     inset: -5px;
 
     background:
@@ -1685,61 +1474,9 @@ footer {
 }
 
 
-/* =========================
-   DARK MODE
-========================= */
-
-body.dark-mode .theme-toggle {
-    background: #18251F;
-    border-color: #30443A;
-
-    box-shadow: none;
-}
-
-
-/* القمر يختفي */
-
-body.dark-mode .theme-moon {
-    opacity: 0;
-
-    transform:
-        scale(0.25)
-        rotate(120deg);
-}
-
-
-/* الشمس تظهر */
-
-body.dark-mode .theme-sun {
-    opacity: 1;
-
-    transform:
-        scale(1)
-        rotate(0deg);
-}
-
-
-/* لون خلفية قص القمر */
-
-body.dark-mode .theme-moon::after {
-    background: #18251F;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    .theme-toggle {
-        width: 40px;
-        height: 40px;
-    }
-
-/* ================================================= */
-/* Dark Mode Colors */
-/* ================================================= */
+/* =========================================================
+   20. DARK MODE
+========================================================= */
 
 body.dark-mode {
     background-color: #0F1713;
@@ -1809,7 +1546,6 @@ body.dark-mode .language-switcher span {
 
 body.dark-mode .login-button {
     background-color: #087F5B;
-
     border-color: #087F5B;
 }
 
@@ -1818,24 +1554,42 @@ body.dark-mode .login-button:hover {
 }
 
 
-/* Theme Button */
+/* Theme button */
 
 body.dark-mode .theme-toggle {
-    background-color: #18231D;
-
-    color: #F5D76E;
+    background-color: #18251F;
 
     border-color: #30443A;
+
+    box-shadow: none;
 }
 
 body.dark-mode .theme-toggle:hover {
     background-color: #213129;
 }
 
+body.dark-mode .theme-moon {
+    opacity: 0;
 
-/* ================================================= */
+    transform:
+        scale(0.25)
+        rotate(120deg);
+}
+
+body.dark-mode .theme-sun {
+    opacity: 1;
+
+    transform:
+        scale(1)
+        rotate(0deg);
+}
+
+body.dark-mode .theme-moon::after {
+    background-color: #18251F;
+}
+
+
 /* Hero */
-/* ================================================= */
 
 body.dark-mode .hero::before {
     border-color: #26382F;
@@ -1859,9 +1613,7 @@ body.dark-mode .hero-label {
 }
 
 
-/* ================================================= */
 /* Buttons */
-/* ================================================= */
 
 body.dark-mode .secondary-button {
     background-color: #18231D;
@@ -1876,9 +1628,7 @@ body.dark-mode .secondary-button:hover {
 }
 
 
-/* ================================================= */
-/* Hero Card */
-/* ================================================= */
+/* Hero card */
 
 body.dark-mode .hero-card {
     background-color: #17221C;
@@ -1927,9 +1677,7 @@ body.dark-mode .course-info span {
 }
 
 
-/* ================================================= */
 /* Sections */
-/* ================================================= */
 
 body.dark-mode .why-badr {
     background-color: #141E19;
@@ -1948,9 +1696,7 @@ body.dark-mode .students-section {
 }
 
 
-/* ================================================= */
-/* Section Headings */
-/* ================================================= */
+/* Section headings */
 
 body.dark-mode .section-heading h2 {
     color: #EAF2EE;
@@ -1962,14 +1708,11 @@ body.dark-mode .section-heading > p {
 
 body.dark-mode .section-label {
     background-color: #18372B;
-
     color: #55C995;
 }
 
 
-/* ================================================= */
-/* Feature Cards */
-/* ================================================= */
+/* Feature cards */
 
 body.dark-mode .feature-card {
     background-color: #17221C;
@@ -1995,9 +1738,7 @@ body.dark-mode .feature-card p {
 }
 
 
-/* ================================================= */
 /* Curriculum */
-/* ================================================= */
 
 body.dark-mode .part-heading > span {
     color: #55C995;
@@ -2020,7 +1761,6 @@ body.dark-mode .unit-card:hover {
 
 body.dark-mode .unit-number {
     background-color: #18372B;
-
     color: #55C995;
 }
 
@@ -2033,9 +1773,7 @@ body.dark-mode .unit-card p {
 }
 
 
-/* ================================================= */
-/* Study System */
-/* ================================================= */
+/* Study system */
 
 body.dark-mode .study-step {
     border-color: #2A3B32;
@@ -2054,9 +1792,7 @@ body.dark-mode .study-step p {
 }
 
 
-/* ================================================= */
 /* Final CTA */
-/* ================================================= */
 
 body.dark-mode .final-cta {
     background-color: #18372B;
@@ -2071,9 +1807,7 @@ body.dark-mode .final-cta p {
 }
 
 
-/* ================================================= */
-/* Auth Modal */
-/* ================================================= */
+/* Auth */
 
 body.dark-mode .auth-card {
     background-color: #17221C;
@@ -2092,7 +1826,6 @@ body.dark-mode .auth-card > p {
 
 body.dark-mode .auth-close {
     background-color: #213129;
-
     color: #EAF2EE;
 }
 
@@ -2124,18 +1857,14 @@ body.dark-mode .auth-note {
 }
 
 
-/* ================================================= */
 /* Footer */
-/* ================================================= */
 
 body.dark-mode footer {
     background-color: #09100C;
 }
 
 
-/* ================================================= */
-/* انتقال ناعم بين الوضعين */
-/* ================================================= */
+/* Smooth transitions */
 
 body,
 header,
@@ -2160,34 +1889,19 @@ header,
 }
 
 
-/* ================================================= */
-/* Mobile Theme Button */
-/* ================================================= */
-
-@media (max-width: 800px) {
-
-    .theme-toggle {
-        width: 36px;
-        height: 36px;
-
-        font-size: 15px;
-    }
-}
-
-  /* =========================================================
-   STUDENT DASHBOARD
+/* =========================================================
+   21. STUDENT DASHBOARD
 ========================================================= */
 
 
-/* =========================
-   DASHBOARD HEADER
-========================= */
+/* Dashboard header */
 
 .dashboard-header {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 
+    min-height: 72px;
     height: 72px;
 
     padding: 0 32px;
@@ -2201,10 +1915,14 @@ header,
     border-bottom: 1px solid #E5EEE9;
 
     backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 4px 18px rgba(18, 55, 42, 0.035);
 }
 
 
-/* Logo */
+/* Dashboard logo */
 
 .dashboard-logo {
     font-size: 20px;
@@ -2219,17 +1937,18 @@ header,
 .dashboard-header-actions {
     display: flex;
     align-items: center;
+
     gap: 20px;
 }
 
 
-/* =========================
-   NOTIFICATION
-========================= */
+/* Notification */
 
 .dashboard-notification {
     width: 40px;
     height: 40px;
+
+    flex-shrink: 0;
 
     border: 1px solid #E1EBE6;
     border-radius: 50%;
@@ -2306,13 +2025,103 @@ header,
 }
 
 
-/* =========================
-   STUDENT MINI PROFILE
-========================= */
+/* Dashboard theme toggle */
+
+.dashboard-header .theme-toggle {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: 1px solid #DCE9E2;
+    border-radius: 50%;
+
+    background: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+.dashboard-header .theme-toggle .theme-moon {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #12372A;
+
+    opacity: 1;
+
+    transform:
+        scale(1)
+        rotate(0deg);
+}
+
+.dashboard-header .theme-toggle .theme-moon::after {
+    background: #FFFFFF;
+}
+
+.dashboard-header .theme-toggle .theme-sun {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #F4B942;
+
+    opacity: 0;
+
+    transform:
+        scale(0.25)
+        rotate(-120deg);
+}
+
+body.dark-mode .dashboard-header .theme-toggle {
+    background: #18251F;
+
+    border-color: #30443A;
+}
+
+body.dark-mode .dashboard-header .theme-moon {
+    opacity: 0;
+
+    transform:
+        scale(0.25)
+        rotate(120deg);
+}
+
+body.dark-mode .dashboard-header .theme-sun {
+    opacity: 1;
+
+    transform:
+        scale(1)
+        rotate(0deg);
+}
+
+body.dark-mode .dashboard-header .theme-moon::after {
+    background: #18251F;
+}
+
+
+/* =========================================================
+   STUDENT PROFILE
+========================================================= */
 
 .student-mini-profile {
     display: flex;
     align-items: center;
+
     gap: 10px;
 }
 
@@ -2366,9 +2175,7 @@ header,
 }
 
 
-/* =========================
-   SIDEBAR
-========================= */
+/* Sidebar */
 
 .dashboard-sidebar {
     width: 240px;
@@ -2383,21 +2190,33 @@ header,
 
     display: flex;
     flex-direction: column;
+
     justify-content: space-between;
 }
 
 
-/* Navigation */
+/* Dashboard nav */
 
 .dashboard-nav {
     display: flex;
+
     flex-direction: column;
+
+    align-items: stretch;
 
     gap: 6px;
 }
 
+.dashboard-nav > a::after {
+    display: none;
+}
 
-/* Nav link */
+.dashboard-nav > a {
+    position: static;
+}
+
+
+/* Dashboard nav link */
 
 .dashboard-nav-link {
     min-height: 46px;
@@ -2432,9 +2251,6 @@ header,
     transform: translateX(-2px);
 }
 
-
-/* Active */
-
 .dashboard-nav-link.active {
     background: #EAF4EF;
 
@@ -2442,7 +2258,7 @@ header,
 }
 
 
-/* Icons */
+/* Nav icons */
 
 .nav-icon {
     width: 22px;
@@ -2504,9 +2320,7 @@ header,
 }
 
 
-/* =========================
-   WELCOME
-========================= */
+/* Welcome */
 
 .dashboard-welcome {
     margin-bottom: 30px;
@@ -2542,7 +2356,7 @@ header,
 
 
 /* =========================================================
-   STAT CARDS
+   DASHBOARD STAT CARDS
 ========================================================= */
 
 .dashboard-stats {
@@ -2555,7 +2369,6 @@ header,
 
     margin-bottom: 20px;
 }
-
 
 .dashboard-stat-card {
     padding: 22px;
@@ -2583,7 +2396,6 @@ header,
     box-shadow:
         0 10px 25px rgba(18, 55, 42, 0.07);
 }
-
 
 .stat-title {
     color: #66736D;
@@ -2626,7 +2438,6 @@ header,
     margin-bottom: 20px;
 }
 
-
 .dashboard-lower-grid {
     display: grid;
 
@@ -2635,7 +2446,6 @@ header,
 
     gap: 20px;
 }
-
 
 .dashboard-card {
     padding: 24px;
@@ -2650,7 +2460,6 @@ header,
         0 5px 18px rgba(18, 55, 42, 0.035);
 }
 
-
 .dashboard-card-header {
     display: flex;
     align-items: flex-start;
@@ -2660,7 +2469,6 @@ header,
 
     margin-bottom: 16px;
 }
-
 
 .card-label {
     display: block;
@@ -2710,9 +2518,6 @@ header,
     white-space: nowrap;
 }
 
-
-/* Lesson progress */
-
 .lesson-progress {
     margin-top: 22px;
 }
@@ -2732,9 +2537,6 @@ header,
     color: #087F5B;
 }
 
-
-/* Progress bar */
-
 .progress-bar {
     width: 100%;
     height: 7px;
@@ -2753,9 +2555,6 @@ header,
 
     background: #087F5B;
 }
-
-
-/* Primary button */
 
 .dashboard-primary-button {
     width: 100%;
@@ -2796,7 +2595,7 @@ header,
 
 
 /* =========================================================
-   UPCOMING ITEMS
+   UPCOMING
 ========================================================= */
 
 .upcoming-item {
@@ -2815,7 +2614,6 @@ header,
     border-bottom: none;
 }
 
-
 .upcoming-icon {
     width: 38px;
     height: 38px;
@@ -2831,7 +2629,6 @@ header,
     font-weight: 800;
 }
 
-
 .homework-icon {
     background: #EAF4EF;
 
@@ -2843,7 +2640,6 @@ header,
 
     color: #B7791F;
 }
-
 
 .upcoming-info {
     display: flex;
@@ -2887,7 +2683,6 @@ header,
     border-bottom: none;
 }
 
-
 .weak-topic-info {
     display: flex;
 
@@ -2908,7 +2703,6 @@ header,
     font-size: 11px;
 }
 
-
 .weak-topic-level {
     padding: 5px 9px;
 
@@ -2923,9 +2717,6 @@ header,
 
     white-space: nowrap;
 }
-
-
-/* Secondary button */
 
 .dashboard-secondary-button {
     width: 100%;
@@ -2979,13 +2770,16 @@ header,
 
 
 /* =========================================================
-   DARK MODE
+   DASHBOARD DARK MODE
 ========================================================= */
 
 body.dark-mode .dashboard-header {
     background: rgba(15, 23, 19, 0.92);
 
     border-bottom-color: #26372F;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.15);
 }
 
 body.dark-mode .dashboard-logo {
@@ -3052,6 +2846,12 @@ body.dark-mode .sidebar-logout {
     color: #91A39A;
 }
 
+body.dark-mode .sidebar-logout:hover {
+    background: #1A2922;
+
+    color: #E8F0EC;
+}
+
 body.dark-mode .dashboard-welcome h1,
 body.dark-mode .dashboard-card h2,
 body.dark-mode .stat-value,
@@ -3112,12 +2912,38 @@ body.dark-mode .dashboard-secondary-button:hover {
     background: #1A2922;
 }
 
+body.dark-mode .exam-score {
+    color: #6BC5A5;
+}
+
 
 /* =========================================================
-   RESPONSIVE
+   22. RESPONSIVE — HOMEPAGE
 ========================================================= */
 
 @media (max-width: 1000px) {
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .units-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .study-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .study-step {
+        border-right: none;
+
+        border-bottom:
+            1px solid #E5EEE9;
+    }
+
+
+    /* Dashboard */
 
     .dashboard-sidebar {
         width: 210px;
@@ -3133,12 +2959,148 @@ body.dark-mode .dashboard-secondary-button:hover {
 }
 
 
+/* =========================================================
+   23. RESPONSIVE — 800px
+========================================================= */
+
 @media (max-width: 800px) {
 
+    /* Homepage header */
+
+    header {
+        min-height: 68px;
+
+        padding: 0 5%;
+    }
+
+    nav > a {
+        display: none;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .login-button {
+        padding: 9px 14px;
+
+        font-size: 13px;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 55px 6%;
+
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-content > p {
+        font-size: 16px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+
+    /* Sections */
+
+    .why-badr,
+    .curriculum,
+    .study-system,
+    .progress-section,
+    .students-section {
+        padding: 75px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .features,
+    .units-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .study-steps {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .final-cta {
+        padding: 70px 6%;
+    }
+
+    .final-cta h2 {
+        font-size: 32px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 45px 6% 25px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+
+    /* Auth */
+
+    .auth-card {
+        padding: 30px 22px;
+
+        border-radius: 18px;
+    }
+
+    .auth-card h2 {
+        font-size: 25px;
+    }
+
+    .auth-close {
+        top: 13px;
+
+        left: 15px;
+
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /* Dashboard */
+
     .dashboard-header {
+        min-height: 64px;
         height: 64px;
 
         padding: 0 18px;
+    }
+
+    .dashboard-header-actions {
+        gap: 10px;
     }
 
     .dashboard-sidebar {
@@ -3184,8 +3146,22 @@ body.dark-mode .dashboard-secondary-button:hover {
     .student-mini-info {
         display: none;
     }
+
+    .dashboard-header .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .dashboard-notification {
+        width: 36px;
+        height: 36px;
+    }
 }
 
+
+/* =========================================================
+   24. RESPONSIVE — 500px
+========================================================= */
 
 @media (max-width: 500px) {
 
@@ -3210,10 +3186,15 @@ body.dark-mode .dashboard-secondary-button:hover {
     }
 
     .dashboard-header-actions {
-        gap: 10px;
+        gap: 8px;
     }
 
     .dashboard-notification {
+        width: 36px;
+        height: 36px;
+    }
+
+    .dashboard-header .theme-toggle {
         width: 36px;
         height: 36px;
     }
@@ -3224,112 +3205,22 @@ body.dark-mode .dashboard-secondary-button:hover {
     }
 }
 
-  /* =========================================================
-   DASHBOARD THEME TOGGLE
+
+/* =========================================================
+   25. REDUCED MOTION
 ========================================================= */
 
-.dashboard-header .theme-toggle {
-    position: relative;
+@media (prefers-reduced-motion: reduce) {
 
-    width: 40px;
-    height: 40px;
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
 
-    flex-shrink: 0;
+        animation-iteration-count: 1 !important;
 
-    padding: 0;
+        transition-duration: 0.01ms !important;
 
-    border: 1px solid #DCE9E2;
-    border-radius: 50%;
-
-    background: #FFFFFF;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    overflow: hidden;
-
-    z-index: 5;
-}
-
-
-/* Moon */
-
-.dashboard-header .theme-toggle .theme-moon {
-    position: absolute;
-
-    width: 16px;
-    height: 16px;
-
-    border-radius: 50%;
-
-    background: #12372A;
-
-    opacity: 1;
-
-    transform: scale(1);
-
-    display: block;
-}
-
-
-/* Moon cut */
-
-.dashboard-header .theme-toggle .theme-moon::after {
-    content: "";
-
-    position: absolute;
-
-    width: 15px;
-    height: 15px;
-
-    top: -4px;
-    right: -4px;
-
-    border-radius: 50%;
-
-    background: #FFFFFF;
-}
-
-
-/* Sun */
-
-.dashboard-header .theme-toggle .theme-sun {
-    position: absolute;
-
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    background: #F4B942;
-
-    opacity: 0;
-
-    transform: scale(0.25);
-
-    display: block;
-}
-
-
-/* Dark mode */
-
-body.dark-mode .dashboard-header .theme-moon {
-    opacity: 0;
-
-    transform: scale(0.25) rotate(120deg);
-}
-
-body.dark-mode .dashboard-header .theme-sun {
-    opacity: 1;
-
-    transform: scale(1) rotate(0deg);
-}
-
-body.dark-mode .dashboard-header .theme-toggle {
-    background: #18251F;
-
-    border-color: #30443A;
+        scroll-behavior: auto !important;
+    }
 }
