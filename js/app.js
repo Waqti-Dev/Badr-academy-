@@ -52,7 +52,7 @@ if ("IntersectionObserver" in window) {
 
 
 // =========================================
-// 2. استكشف المنهج
+// 2. استكشف المنهج - الصفحة الرئيسية
 // =========================================
 
 const exploreCurriculum =
@@ -558,20 +558,4 @@ if (themeToggle) {
         }
     );
 
-}
-
-// =========================================
-// 12. الانتقال إلى صفحة المنهج من Dashboard
-// =========================================
-
-const dashboardCurriculumButton =
-    document.getElementById("dashboard-curriculum-button");
-
-if (dashboardCurriculumButton) {
-    dashboardCurriculumButton.addEventListener(
-        "click",
-        () => {
-            window.location.href = "lessons.html";
-        }
-    );
 }
