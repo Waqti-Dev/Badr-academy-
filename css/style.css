@@ -1005,8 +1005,8 @@ footer {
     transform: translateY(20px);
 
     transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
+        opacity 2s ease,
+        transform 2s ease;
 }
 
 .reveal.show {
