@@ -1744,38 +1744,6 @@ body.dark-mode .theme-moon::after {
         height: 40px;
     }
 
-}* =========================
-   DARK MODE ICON
-========================= */
-
-body.dark-mode .theme-toggle {
-    background-color: #18251F;
-    border-color: #30443A;
-}
-
-body.dark-mode .theme-moon {
-    opacity: 0;
-    transform: scale(0.3) rotate(90deg);
-}
-
-body.dark-mode .theme-moon::after {
-    background-color: #18251F;
-}
-
-body.dark-mode .theme-sun {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-}
-
-/* Mobile */
-
-@media (max-width: 800px) {
-    .theme-toggle {
-        width: 40px;
-        height: 40px;
-    }
-}
-
 /* ================================================= */
 /* Dark Mode Colors */
 /* ================================================= */
