@@ -5,7 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>أكاديمية بدر للتعلم الذكي</title>
 
@@ -14,7 +17,10 @@
         content="أكاديمية بدر للتعلم الذكي - تعلم المحاسبة لطلاب البكالوريا المصرية."
     >
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
 </head>
 
@@ -23,63 +29,113 @@
 
 
     <!-- ================================= -->
-    <!-- الهيدر -->
+    <!-- HEADER -->
     <!-- ================================= -->
 
-<header>
+    <header>
 
-    <div class="logo">
-        أكاديمية بدر
-    </div>
+        <div class="logo">
+            أكاديمية بدر
+        </div>
 
-    <nav>
 
-        <a href="#home" id="nav-home">
-            الرئيسية
-        </a>
+        <!-- زر القائمة للموبايل -->
 
-        <a href="#curriculum" id="nav-curriculum">
-            المنهج
-        </a>
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <a href="#about" id="nav-about">
-            عن الأكاديمية
-        </a>
 
-        <div class="language-switcher">
+        <!-- NAVIGATION -->
 
-            <button class="language-active">
-                العربية
+        <nav id="main-nav">
+
+            <a
+                href="#home"
+                id="nav-home"
+            >
+                الرئيسية
+            </a>
+
+
+            <a
+                href="#curriculum"
+                id="nav-curriculum"
+            >
+                المنهج
+            </a>
+
+
+            <a
+                href="#about"
+                id="nav-about"
+            >
+                عن الأكاديمية
+            </a>
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-switcher">
+
+                <button
+                    class="language-active"
+                    type="button"
+                >
+                    العربية
+                </button>
+
+                <span>|</span>
+
+                <button
+                    type="button"
+                >
+                    English
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+            <!-- DARK MODE -->
+
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                aria-label="تفعيل الوضع الداكن"
+                type="button"
+            >
+                <span class="theme-icon theme-sun"></span>
+                <span class="theme-icon theme-moon"></span>
             </button>
 
-            <span>|</span>
 
-            <button>
-                English
+            <!-- LOGIN -->
+
+            <button
+                class="login-button"
+                id="navbar-login"
+                type="button"
+            >
+                تسجيل الدخول
             </button>
 
         </div>
 
-        <button
-    class="theme-toggle"
-    id="theme-toggle"
-    aria-label="تفعيل الوضع الداكن"
-    type="button"
->
-    <span class="theme-icon theme-sun"></span>
-    <span class="theme-icon theme-moon"></span>
-</button>
-
-        <button
-            class="login-button"
-            id="navbar-login"
-        >
-            تسجيل الدخول
-        </button>
-
-    </nav>
-
-</header>
+    </header>
 
 
 
@@ -90,11 +146,10 @@
         <!-- HERO -->
         <!-- ================================= -->
 
-        <!-- مهم: لا نضيف reveal هنا -->
-        <!-- لأن الـHero له Animation مستقل بالفعل -->
-
-        <section class="hero" id="home">
-
+        <section
+            class="hero"
+            id="home"
+        >
 
             <div class="hero-content">
 
@@ -102,11 +157,13 @@
                     أكاديمية بدر للتعلم الذكي
                 </span>
 
+
                 <h1>
                     اتعلم المحاسبة
                     <br>
                     <span>بفهم، مش حفظ.</span>
                 </h1>
+
 
                 <p>
                     من أساسيات المحاسبة والقيد المزدوج،
@@ -115,13 +172,23 @@
                     تدريب مستمر، وقياس حقيقي لمستواك.
                 </p>
 
+
                 <div class="hero-actions">
 
-                    <button class="primary-button start-learning-button">
-    ابدأ التعلم
-</button>
-                    <button class="secondary-button" id="explore-curriculum">
-    استكشف المنهج
+                    <button
+                        class="primary-button start-learning-button"
+                        type="button"
+                    >
+                        ابدأ التعلم
+                    </button>
+
+
+                    <button
+                        class="secondary-button"
+                        id="explore-curriculum"
+                        type="button"
+                    >
+                        استكشف المنهج
                     </button>
 
                 </div>
@@ -144,14 +211,17 @@
 
                 </div>
 
+
                 <h3>
                     المحاسبة
                 </h3>
+
 
                 <p>
                     لطلاب البكالوريا المصرية
                     — الصف الثاني
                 </p>
+
 
                 <div class="course-info">
 
@@ -167,6 +237,7 @@
 
                     </div>
 
+
                     <div>
 
                         <strong>
@@ -181,9 +252,14 @@
 
                 </div>
 
-                <button class="card-button" id="explore-curriculum-card">
-    استكشف المنهج
-</button>
+
+                <button
+                    class="card-button"
+                    id="explore-curriculum-card"
+                    type="button"
+                >
+                    استكشف المنهج
+                </button>
 
             </div>
 
@@ -195,8 +271,10 @@
         <!-- WHY BADR -->
         <!-- ================================= -->
 
-        <section class="why-badr" id="about">
-
+        <section
+            class="why-badr"
+            id="about"
+        >
 
             <div class="section-heading reveal">
 
@@ -204,9 +282,11 @@
                     لماذا Badr؟
                 </span>
 
+
                 <h2>
                     لأن فهمك أهم من إنك تخلص الدرس.
                 </h2>
+
 
                 <p>
                     المحاسبة مش مجرد قواعد تحفظها وتنسى تطبيقها.
@@ -216,7 +296,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="features">
@@ -306,8 +385,10 @@
         <!-- CURRICULUM -->
         <!-- ================================= -->
 
-        <section class="curriculum" id="curriculum">
-
+        <section
+            class="curriculum"
+            id="curriculum"
+        >
 
             <div class="section-heading reveal">
 
@@ -341,7 +422,6 @@
                     </h3>
 
                 </div>
-
 
 
                 <div class="units-grid">
@@ -572,7 +652,6 @@
 
         <section class="study-system">
 
-
             <div class="section-heading reveal">
 
                 <span class="section-label">
@@ -697,7 +776,6 @@
 
         <section class="progress-section">
 
-
             <div class="progress-content reveal">
 
                 <span class="section-label">
@@ -729,8 +807,7 @@
         <!-- WHO IS IT FOR -->
         <!-- ================================= -->
 
-        <section class="students-section" id="about">
-
+        <section class="students-section">
 
             <div class="section-heading reveal">
 
@@ -772,9 +849,12 @@
                 واعرف مستواك خطوة بخطوة.
             </p>
 
-            <button class="primary-button start-learning-button">
-    ابدأ التعلم
-</button>
+            <button
+                class="primary-button start-learning-button"
+                type="button"
+            >
+                ابدأ التعلم
+            </button>
 
         </section>
 
@@ -802,7 +882,6 @@
         </div>
 
 
-
         <div class="footer-links">
 
             <a href="#home">
@@ -820,7 +899,6 @@
         </div>
 
 
-
         <div class="footer-bottom">
 
             <p>
@@ -831,75 +909,101 @@
 
     </footer>
 
-  <!-- ================================= -->
-<!-- LOGIN MODAL -->
-<!-- ================================= -->
 
-<div class="auth-modal" id="auth-modal">
 
-    <div class="auth-overlay" id="auth-overlay"></div>
+    <!-- ================================= -->
+    <!-- LOGIN MODAL -->
+    <!-- ================================= -->
 
-    <div class="auth-card">
+    <div
+        class="auth-modal"
+        id="auth-modal"
+    >
 
-        <button class="auth-close" id="auth-close">
-            ×
-        </button>
+        <div
+            class="auth-overlay"
+            id="auth-overlay"
+        ></div>
 
-        <span class="section-label">
-            أكاديمية بدر
-        </span>
 
-        <h2>
-            ابدأ رحلتك في المحاسبة
-        </h2>
-
-        <p>
-            سجل دخولك للوصول إلى دروسك وواجباتك ونتائجك.
-        </p>
-
-        <form id="login-form">
-
-            <label for="student-email">
-                البريد الإلكتروني
-            </label>
-
-            <input
-                type="email"
-                id="student-email"
-                placeholder="أدخل بريدك الإلكتروني"
-                required
-            >
-
-            <label for="student-password">
-                كلمة المرور
-            </label>
-
-            <input
-                type="password"
-                id="student-password"
-                placeholder="أدخل كلمة المرور"
-                required
-            >
+        <div class="auth-card">
 
             <button
-                type="submit"
-                class="primary-button auth-submit"
+                class="auth-close"
+                id="auth-close"
+                type="button"
             >
-                تسجيل الدخول
+                ×
             </button>
 
-        </form>
 
-        <p class="auth-note">
-            ليس لديك حساب؟ سيتم فتح التسجيل قريبًا.
-        </p>
+            <span class="section-label">
+                أكاديمية بدر
+            </span>
+
+
+            <h2>
+                ابدأ رحلتك في المحاسبة
+            </h2>
+
+
+            <p>
+                سجل دخولك للوصول إلى دروسك وواجباتك ونتائجك.
+            </p>
+
+
+            <form id="login-form">
+
+                <label for="student-email">
+                    البريد الإلكتروني
+                </label>
+
+
+                <input
+                    type="email"
+                    id="student-email"
+                    placeholder="أدخل بريدك الإلكتروني"
+                    required
+                >
+
+
+                <label for="student-password">
+                    كلمة المرور
+                </label>
+
+
+                <input
+                    type="password"
+                    id="student-password"
+                    placeholder="أدخل كلمة المرور"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary-button auth-submit"
+                >
+                    تسجيل الدخول
+                </button>
+
+            </form>
+
+
+            <p class="auth-note">
+                ليس لديك حساب؟ سيتم فتح التسجيل قريبًا.
+            </p>
+
+        </div>
 
     </div>
 
-</div>
-  
+
+
+    <!-- JAVASCRIPT -->
 
     <script src="js/app.js"></script>
 
 </body>
+
 </html>
