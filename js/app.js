@@ -4,30 +4,41 @@
 
 const revealElements = document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver(
-    (entries) => {
+if ("IntersectionObserver" in window) {
 
-        entries.forEach((entry) => {
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
 
-            if (entry.isIntersecting) {
+            entries.forEach((entry) => {
 
-                entry.target.classList.add("show");
+                if (entry.isIntersecting) {
 
-                revealObserver.unobserve(entry.target);
-            }
+                    entry.target.classList.add("show");
 
-        });
+                    revealObserver.unobserve(entry.target);
+                }
 
-    },
-    {
-        threshold: 0.15
-    }
-);
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
 
 
-revealElements.forEach((element) => {
-    revealObserver.observe(element);
-});
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+
+} else {
+
+    // لو المتصفح مش بيدعم IntersectionObserver
+    revealElements.forEach((element) => {
+        element.classList.add("show");
+    });
+
+}
 
 
 
@@ -47,22 +58,32 @@ function goToCurriculum() {
     const curriculumSection =
         document.getElementById("curriculum");
 
+    if (!curriculumSection) return;
+
     curriculumSection.scrollIntoView({
         behavior: "smooth"
     });
 }
 
 
-exploreCurriculum.addEventListener(
-    "click",
-    goToCurriculum
-);
+if (exploreCurriculum) {
+
+    exploreCurriculum.addEventListener(
+        "click",
+        goToCurriculum
+    );
+
+}
 
 
-exploreCurriculumCard.addEventListener(
-    "click",
-    goToCurriculum
-);
+if (exploreCurriculumCard) {
+
+    exploreCurriculumCard.addEventListener(
+        "click",
+        goToCurriculum
+    );
+
+}
 
 
 
@@ -85,6 +106,8 @@ const startLearningButtons =
 
 // فتح نافذة تسجيل الدخول
 function openAuthModal() {
+
+    if (!authModal) return;
 
     authModal.classList.add("active");
 
@@ -109,42 +132,58 @@ function closeAuthModal() {
 // أزرار ابدأ التعلم
 startLearningButtons.forEach(
     (button) => {
+
         button.addEventListener(
             "click",
             () => {
-                window.location.href = "dashboard.html";
+
+                window.location.href =
+                    "dashboard.html";
+
             }
         );
+
     }
 );
 
 
 // زر X
-authClose.addEventListener(
-    "click",
-    closeAuthModal
-);
+if (authClose) {
+
+    authClose.addEventListener(
+        "click",
+        closeAuthModal
+    );
+
+}
 
 
 // الضغط على الخلفية
-authOverlay.addEventListener(
-    "click",
-    closeAuthModal
-);
+if (authOverlay) {
+
+    authOverlay.addEventListener(
+        "click",
+        closeAuthModal
+    );
+
+}
 
 
 
 // =========================================
-// 4. زر ESC للإغلاق
+// 4. زر ESC
 // =========================================
 
 document.addEventListener(
     "keydown",
     (event) => {
 
+        // إغلاق Login Modal
         if (event.key === "Escape") {
 
             closeAuthModal();
+
+            closeMobileMenu();
 
         }
 
@@ -161,30 +200,217 @@ const loginForm =
     document.getElementById("login-form");
 
 
-loginForm.addEventListener(
-    "submit",
-    (event) => {
+if (loginForm) {
 
-        event.preventDefault();
+    loginForm.addEventListener(
+        "submit",
+        (event) => {
 
-        alert(
-            "واجهة تسجيل الدخول جاهزة. سنربطها بالحسابات وقاعدة البيانات لاحقًا."
-        );
+            event.preventDefault();
 
-    }
-);
+            alert(
+                "واجهة تسجيل الدخول جاهزة. سنربطها بالحسابات وقاعدة البيانات لاحقًا."
+            );
+
+        }
+    );
+
+}
+
+
+
+// =========================================
+// 6. زر تسجيل الدخول في الـ Navbar
+// =========================================
+
 const navbarLogin =
     document.getElementById("navbar-login");
 
+
 if (navbarLogin) {
+
     navbarLogin.addEventListener(
         "click",
         openAuthModal
     );
+
 }
-// =========================
-// DARK MODE
-// =========================
+
+
+
+// =========================================
+// 7. MOBILE NAVBAR
+// =========================================
+
+const mobileMenuToggle =
+    document.getElementById("mobile-menu-toggle");
+
+const mainHeader =
+    document.querySelector("header:not(.dashboard-header)");
+
+
+// فتح القائمة
+function openMobileMenu() {
+
+    if (!mainHeader) return;
+
+    mainHeader.classList.add("mobile-menu-open");
+
+    if (mobileMenuToggle) {
+
+        mobileMenuToggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        mobileMenuToggle.setAttribute(
+            "aria-label",
+            "إغلاق القائمة"
+        );
+
+    }
+
+}
+
+
+// إغلاق القائمة
+function closeMobileMenu() {
+
+    if (!mainHeader) return;
+
+    mainHeader.classList.remove("mobile-menu-open");
+
+    if (mobileMenuToggle) {
+
+        mobileMenuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        mobileMenuToggle.setAttribute(
+            "aria-label",
+            "فتح القائمة"
+        );
+
+    }
+
+}
+
+
+// فتح / إغلاق القائمة
+if (mobileMenuToggle) {
+
+    mobileMenuToggle.addEventListener(
+        "click",
+        (event) => {
+
+            event.stopPropagation();
+
+            const isOpen =
+                mainHeader.classList.contains(
+                    "mobile-menu-open"
+                );
+
+            if (isOpen) {
+
+                closeMobileMenu();
+
+            } else {
+
+                openMobileMenu();
+
+            }
+
+        }
+    );
+
+}
+
+
+
+// =========================================
+// 8. روابط الـ Mobile Navbar
+// =========================================
+
+if (mainHeader) {
+
+    const mobileNavLinks =
+        mainHeader.querySelectorAll("nav a");
+
+    mobileNavLinks.forEach(
+        (link) => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    closeMobileMenu();
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+
+// =========================================
+// 9. الضغط خارج الـ Mobile Navbar
+// =========================================
+
+document.addEventListener(
+    "click",
+    (event) => {
+
+        if (!mainHeader) return;
+
+        const isOpen =
+            mainHeader.classList.contains(
+                "mobile-menu-open"
+            );
+
+        if (!isOpen) return;
+
+
+        const clickedInsideHeader =
+            mainHeader.contains(event.target);
+
+
+        if (!clickedInsideHeader) {
+
+            closeMobileMenu();
+
+        }
+
+    }
+);
+
+
+
+// =========================================
+// 10. إغلاق القائمة عند تغيير حجم الشاشة
+// =========================================
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if (window.innerWidth > 800) {
+
+            closeMobileMenu();
+
+        }
+
+    }
+);
+
+
+
+// =========================================
+// 11. DARK MODE
+// =========================================
 
 const themeToggle =
     document.getElementById("theme-toggle");
@@ -192,34 +418,50 @@ const themeToggle =
 const savedTheme =
     localStorage.getItem("badr-theme");
 
+
 if (savedTheme === "dark") {
-    document.body.classList.add("dark-mode");
+
+    document.body.classList.add(
+        "dark-mode"
+    );
+
 }
 
+
 if (themeToggle) {
+
     themeToggle.addEventListener(
         "click",
         () => {
+
             document.body.classList.toggle(
                 "dark-mode"
             );
+
 
             const isDark =
                 document.body.classList.contains(
                     "dark-mode"
                 );
 
+
             if (isDark) {
+
                 localStorage.setItem(
                     "badr-theme",
                     "dark"
                 );
+
             } else {
+
                 localStorage.setItem(
                     "badr-theme",
                     "light"
                 );
+
             }
+
         }
     );
+
 }
